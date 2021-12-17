@@ -1,0 +1,130 @@
+body,html{
+    background: #0C695D;
+    margin: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+aside{
+    flex: 1;
+    padding: 2em 2em;
+    text-align: center;   
+
+    color: white;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+nav{
+    background: #E0F2F2;
+    
+}
+.active{
+    position: absolute;
+    display: block;
+    background: #E0F2F2;
+    width: 50%;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+ul li a{
+    margin-top: 5em;
+    display: block;
+    padding:  1.2em 2em;
+    text-decoration: none;
+    color: #152329;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+main{
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content img{
+   margin: 4em auto;
+   display: flex;
+   align-items: center;
+}
+
+.text-content h1{
+   margin: 0 2em;
+   text-align: center;
+   font-family: montserrat;
+   color: white;
+}
+
+.button-area{
+    display: flex;
+    gap: 1em;
+    padding: 30px 10%;
+    margin: 0;
+    font-family: montserrat;
+}
+
+.button-area .btn-login{
+flex: 1;
+border: 5px solid #E0F2F2;
+padding: 1em;
+text-align: center;
+color: #E0F2F2;
+background: #0C695D;
+font-weight: bold;
+}
+
+.button-area .btn-reg{
+flex: 1;
+border: 5px solid #E0F2F2;
+padding: 1em;
+text-align: center;
+color: #E0F2F2;
+background: #0C695D;
+font-weight: bold;
+}
+
+/* .button-area {
+    display: flex;
+    margin-top: 3em;
+    padding: 1em 3em;
+}
+
+.button-area .btn-login{
+    
+    border: 5px solid white;
+    background: #0C695D;
+    text-align: center;
+    width: 50%;
+
+    font-family: montserrat;
+    color: white;
+    font-size: .5rem;
+    
+}
+
+.button-area .btn-reg{
+    flex: 1;
+    border: 5px solid white;
+    background: #0C695D;
+    width: 50%;
+    text-align: center;
+
+    font-family: montserrat;
+    color: white;
+    font-size: .5rem;
+
+} */

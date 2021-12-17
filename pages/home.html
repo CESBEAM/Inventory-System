@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/homeStyle.css">
+</head>
+<body>
+    <aside>
+        <header>
+         CONPYX
+        <div class="menu">
+        <img src="../icons/menuwh.svg" alt="">
+        </div>
+      </header>
+      <nav>     
+          <ul>
+              <!-- <li><a href="#">Bulsu</a></li>
+              <li><a href="#">Products</a></li> -->
+              <li><a href="#">About</a></li>
+          </ul>       
+      </nav>
+    </aside>
+   <main>
+       <div class="main-content">
+       <img src="../Images/mobileImg.svg" alt="">
+          <div class="text-content">
+              <h1>Great life with best solutions for feal businesses</h1>
+          </div>
+
+          <div class="button-area">
+              <div class="btn-login">LOGIN</div>
+
+              <div class="btn-reg">REGISTER</div>
+          </div>
+       </div>
+   </main>
+</body>
+<script>
+        
+    (function() {
+        var menu = document.querySelector('ul'),
+            menulink = document.querySelector('img');
+        
+        menulink.addEventListener('click', function(e) {
+            menu.classList.toggle('active');
+            e.preventDefault();
+        });
+    })();
+
+</script>
+</html>
