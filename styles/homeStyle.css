@@ -11,7 +11,7 @@ header{
 
 .logo a {
     text-decoration: none;
-    color: #E0F2F2;;
+    color: #E0F2F2;
 }
 
 .menu{
@@ -31,7 +31,10 @@ aside{
 
 nav{
     background: #E0F2F2;
-    
+}
+
+nav .logomob{
+    display: none;
 }
 .active{
     position: absolute;
@@ -76,7 +79,27 @@ main{
    text-align: center;
    font-family: montserrat;
    color: #E0F2F2;
+   font-size: 1.5em;
 }
+
+/* .text-content p{
+    padding: 2em 5em;
+    text-align: justify;
+    font-family: montserrat;
+    color: #E0F2F2;
+    font-size: .5em;
+    line-height: 1.7em;
+ } */
+
+ .details-content p{
+    padding: 0 5em;
+    text-align: justify;
+    font-family: montserrat;
+    color: #E0F2F2;
+    font-size: .5em;
+    line-height: 1.7em;
+ }
+
 
 .button-area{
     display: flex;
@@ -91,7 +114,7 @@ font-family: montserrat;
 flex: 1;
 margin: 0;
 border: 5px solid #E0F2F2;
-padding: 1.5em 4em;
+padding: 1.2em 3em;
 text-align: center;
 color: #E0F2F2;
 background: #0C695D;
@@ -103,43 +126,152 @@ font-family: montserrat;
 flex: 1;
 margin: 0;
 border: 5px solid #E0F2F2;
-padding: 1.5em 3em;
+padding: 1.2em 2em;
 text-align: center;
 color: #E0F2F2;
 background: #0C695D;
 font-weight: bold;
 }
 
-
-
-/* .button-area {
-    display: flex;
-    margin-top: 3em;
-    padding: 1em 3em;
+.desk-version img{
+    display: none;
 }
 
-.button-area .btn-login{
-    
-    border: 5px solid white;
-    background: #0C695D;
-    text-align: center;
-    width: 50%;
+.text-content-desk{
+    display: none;
+}
 
+.desk-text{
+    display: none;
+}
+.desk-btn{
+    display: none;
+}
+
+@media (min-width: 768px){
+      body{
+        background: #E0F2F2;
+        height: 100%;
+    }
+    .logo{
+        display: none;
+    }
+
+    .menu img{
+      display: none;
+    }
+
+
+
+    nav{
+        display: flex;
+        padding: 2em 4em;
+       
+    }
+    
+   nav .logomob{
+      display: inline-flex;
+      text-decoration: none;
+      color: black;
+    }
+
+    nav li{
+        display: inline-flex;
+    
+    }
+    nav ul{
+        flex: 1;
+        display: block;
+    }
+
+    nav li a{
+        font-size: small;
+        margin-top: 0;
+        padding: 0 2em;
+    }
+
+    .main-content img{
+        display: none;
+    }
+
+
+
+
+
+
+
+
+    .desk-version{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "text-content-desk desk"
+        "desk-text desk-img"
+        "desk-btn desk-img"
+            }
+
+    
+    .text-content-desk{
+        font-family: montserrat;
+        grid-area: text-content-desk;
+        color: black;
+        display: flex;
+        text-align: justify;
+        font-size: .8em;
+        margin: 0 7em;
+    }
+
+    .desk-text{
+        font-family: montserrat;
+        grid-area: text-content-desk;
+        color: black;
+        display: flex;
+        text-align: justify;
+        font-size: .8em;
+        margin-top: 10em;
+        padding: 0 7em;
+    } 
+      
+    .desk-img img{
+       display: flex;
+       grid-area: desk-img;       
+       justify-content: center;
+       align-items: center;
+       width: 50%;
+       margin: auto;
+      
+   } 
+
+   .desk-btn .desk-login{
     font-family: montserrat;
-    color: white;
-    font-size: .5rem;
-    
-}
-
-.button-area .btn-reg{
     flex: 1;
-    border: 5px solid white;
-    background: #0C695D;
-    width: 50%;
+    margin: 0;
+    border: 5px solid black;
+    padding: 1.2em 3em;
     text-align: center;
+    color: black;
+    background: #0C695D;
+    font-weight: bold;
+    }
+      
 
-    font-family: montserrat;
-    color: white;
-    font-size: .5rem;
+    /* .desk-image{
+        display: flex;
+        justify-content:flex-end;
+        width: 30%;
+    } */
 
-} */
+
+
+
+
+
+
+
+
+
+    .button-area{
+        display: none;
+    }
+}
