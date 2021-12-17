@@ -51,9 +51,9 @@ ul{
 }
 
 ul li a{
-    margin-top: 5em;
+    margin-top: 3em;
     display: block;
-    padding:  1.2em 2em;
+    padding:  .5em 0;
     text-decoration: none;
     color: #152329;
     font-size: 1.2rem;

@@ -1,0 +1,38 @@
+html, body{
+    margin: 0;
+    line-height: 1.2em;
+    background: #E0F2F2;
+}
+
+.top-head{
+    padding: 3em;
+    text-align: center;
+    color:#152329;
+    font-family: montserrat;
+}
+.main-content{
+    color:#152329;
+    font-family: montserrat;
+    font-size: .8rem;
+    text-align: justify;
+    padding: 1em 2em;
+}
+
+.vm{
+    padding: 3em 0;
+}
+
+.vm p{
+    padding: 1em 0;
+    color:#152329;
+}
+
+.goals{
+    padding: 1em 0;
+    color:#152329;
+}
+
+.goals p{
+    padding: 1em 0;
+    color:#152329;
+}

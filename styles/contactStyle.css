@@ -1,0 +1,55 @@
+html,body{
+    margin: 0;
+    background: #E0F2F2;
+}
+
+.top-head{
+    padding: 3em;
+    text-align: center;
+    font-family: montserrat;
+    color:#152329;
+}
+
+.system-img{
+   display: flex;
+    }
+
+.system-img img{
+   flex: 1;
+   margin-top: 3em;
+}
+
+.head-content{
+    font-size: .7em;
+    padding: 2em 8em;
+    color:#152329;
+    text-align: justify;
+    font-family: montserrat;
+}
+
+.text-content{
+    text-align: justify;
+    font-family: montserrat;
+    padding: 0 8em;
+    font-size: .7rem;
+    color:#152329;
+}
+
+.names-row1{
+    text-align: center;
+    font-family: montserrat;
+    margin-top: 5em;
+    padding: 0 8em;
+    font-size: .7rem;
+    color:#152329;
+}
+
+.names-row2{
+    text-align: center;
+    font-family: montserrat;
+    
+    margin-top: 5em;
+    padding: 0 8em;
+    font-size: .7rem;
+    color:#152329;
+}
