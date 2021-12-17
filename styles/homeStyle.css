@@ -9,12 +9,21 @@ header{
     margin: 0;
 }
 
+.logo a {
+    text-decoration: none;
+    color: #E0F2F2;;
+}
+
+.menu{
+    cursor: pointer;
+}
+
 aside{
     flex: 1;
     padding: 2em 2em;
     text-align: center;   
 
-    color: white;
+    color: #E0F2F2;
     font-family: Montserrat;
     font-weight: bold;
     font-size: 1.2rem;
@@ -66,7 +75,7 @@ main{
    margin: 0 2em;
    text-align: center;
    font-family: montserrat;
-   color: white;
+   color: #E0F2F2;
 }
 
 .button-area{
@@ -74,13 +83,15 @@ main{
     gap: 1em;
     padding: 30px 10%;
     margin: 0;
-    font-family: montserrat;
+    justify-content: center;
 }
 
 .button-area .btn-login{
+font-family: montserrat;
 flex: 1;
+margin: 0;
 border: 5px solid #E0F2F2;
-padding: 1em;
+padding: 1.5em 4em;
 text-align: center;
 color: #E0F2F2;
 background: #0C695D;
@@ -88,14 +99,18 @@ font-weight: bold;
 }
 
 .button-area .btn-reg{
+font-family: montserrat;
 flex: 1;
+margin: 0;
 border: 5px solid #E0F2F2;
-padding: 1em;
+padding: 1.5em 3em;
 text-align: center;
 color: #E0F2F2;
 background: #0C695D;
 font-weight: bold;
 }
+
+
 
 /* .button-area {
     display: flex;
