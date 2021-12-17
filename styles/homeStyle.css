@@ -148,10 +148,15 @@ font-weight: bold;
     display: none;
 }
 
+.btn-reg-mob{
+    display: none;
+}
+
 @media (min-width: 768px){
       body{
         background: #E0F2F2;
         height: 100%;
+        
     }
     .logo{
         display: none;
@@ -162,25 +167,37 @@ font-weight: bold;
     }
 
 
-
     nav{
+       padding: 2em 3.4em;
+       justify-content: space-between;
         display: flex;
-        padding: 2em 4em;
+        align-items: center;
        
     }
     
    nav .logomob{
-      display: inline-flex;
+      display: inline;
       text-decoration: none;
-      color: black;
+      color: #152329;
+    }
+    
+    nav .btn-reg-mob{
+        display: inline;
+        font-family: montserrat;
+        border-style: none;
+        padding: 1.2em 3em;
+        color: #FFFFFF;
+        background: #0C695D;
+        font-weight: bold;
+        font-size: .7em;
     }
 
-    nav li{
+    nav li {
         display: inline-flex;
     
     }
-    nav ul{
-        flex: 1;
+    nav ul {
+       
         display: block;
     }
 
@@ -194,28 +211,21 @@ font-weight: bold;
         display: none;
     }
 
-
-
-
-
-
-
-
     .desk-version{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         grid-template-areas: 
         "text-content-desk desk"
-        "desk-text desk-img"
-        "desk-btn desk-img"
+      
+     
             }
 
     
     .text-content-desk{
         font-family: montserrat;
         grid-area: text-content-desk;
-        color: black;
+        color: #152329;
         display: flex;
         text-align: justify;
         font-size: .8em;
@@ -225,12 +235,13 @@ font-weight: bold;
     .desk-text{
         font-family: montserrat;
         grid-area: text-content-desk;
-        color: black;
+        color: #152329;
         display: flex;
         text-align: justify;
         font-size: .8em;
         margin-top: 10em;
         padding: 0 7em;
+        line-height: 1.5em;
     } 
       
     .desk-img img{
@@ -243,15 +254,21 @@ font-weight: bold;
       
    } 
 
-   .desk-btn .desk-login{
+   .desk-btn{
+       display: inline-flex;
+    
+   }
+
+   .desk-btn button{
+    grid-area: text-content-desk;
+    margin-top: 0;
+  
     font-family: montserrat;
-    flex: 1;
-    margin: 0;
-    border: 5px solid black;
-    padding: 1.2em 3em;
-    text-align: center;
-    color: black;
-    background: #0C695D;
+    margin-left: 10em;
+    border: 3px solid #152329;
+    padding: 1.2em 5em;
+    color: #152329;
+    background: #E0F2F2;
     font-weight: bold;
     }
       

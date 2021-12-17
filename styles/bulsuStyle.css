@@ -36,3 +36,13 @@ html, body{
     padding: 1em 0;
     color:#152329;
 }
+
+@media (min-width: 768px){
+  body{
+      padding: 2em 10em;
+      line-height: 2em;
+  }
+  p{
+    font-size: 1.2em;
+  }
+}
