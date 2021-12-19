@@ -7,29 +7,23 @@
   body {
     font-family:montserrat;
     line-height: 1.6;
+    background: #697f90;
   }
   
   .container {
     margin: auto;
-    
     overflow: auto;
     padding: 3rem 2rem;
   }
   
   #my-form {
+    
     padding: 1em;
-    background: #f0efee;
-    margin: 1.5em;
-  }
-  
-  #my-form h2{
-    text-align: center;
     background: #f4f4f4;
-    margin-bottom: 2em;
   }
 
-  #my-form P{
-    
+  #my-form h2{
+    text-align: center;
     background: #f4f4f4;
     margin-bottom: 2em;
   }
@@ -41,6 +35,14 @@
   }
   
   #my-form input[type='text'] {
+    width: 100%;
+    padding: 1.1em;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  #my-form input[type='email'] {
     width: 100%;
     padding: 1.1em;
     margin-bottom: 10px;
@@ -97,6 +99,7 @@
       #my-form {
         padding: 2rem;
         background: #f4f4f4;
+        margin: 1.5em;
       }
       
       #my-form label {
