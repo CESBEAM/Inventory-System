@@ -41,7 +41,7 @@
     font-weight: 600;
   }
   
-  #my-form input[type='text'] {
+  #my-form input[type='email'] {
     width: 100%;
     padding: 1.1em;
     margin-bottom: 10px;
