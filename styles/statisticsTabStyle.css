@@ -15,6 +15,13 @@
     display: flex;
     position: relative;
   }
+
+  .wrapper .sidebar h2{
+    color: #F0F0F0;
+    font-size: medium;
+    text-align: center;
+    margin-bottom: 30px;
+  }
   
   .wrapper .sidebar{
       
