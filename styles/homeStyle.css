@@ -255,12 +255,11 @@ font-weight: bold;
    } 
 
    .desk-btn{
-       display: inline-flex;
+       display: block;
     
    }
 
    .desk-btn button{
-    grid-area: text-content-desk;
     margin-top: 0;
   
     font-family: montserrat;
@@ -271,6 +270,8 @@ font-weight: bold;
     background: #E0F2F2;
     font-weight: bold;
     }
+
+    
       
 
     /* .desk-image{

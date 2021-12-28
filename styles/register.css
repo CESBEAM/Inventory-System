@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family:montserrat;
+    line-height: 1.6;
+    background: #697f90;
+  }
+  
+  .container {
+    margin: auto;
+    overflow: auto;
+    padding: 3rem 2rem;
+  }
+  
+  #my-form {
+    
+    padding: 1em;
+    background: #f4f4f4;
+  }
+
+  #my-form h2{
+    text-align: center;
+    background: #f4f4f4;
+    margin-bottom: 2em;
+  }
+  
+  #my-form label {
+    margin-top: .5em;
+    display: block;
+    font-weight: 600;
+  }
+  
+  #my-form input[type='text'] {
+    width: 100%;
+    padding: 1.1em;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  #my-form input[type='email'] {
+    width: 100%;
+    padding: 1.1em;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  #my-form input[type='password'] {
+    width: 100%;
+    padding: 1.1em;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .btn {
+    text-align: center;
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    border: 0;
+    background: #2d8e;
+    color: #fff;
+    border-radius: 5px;
+    margin: 1.5em 0;
+  }
+  
+  .btn:hover {
+    background: #444;
+  }
+  
+  .bg-dark {
+    background: #333;
+    color: #fff;
+  }
+
+  .forg{
+     margin-top: 2em;
+  }
+
+  .sign-link{
+    margin-top: 1em;
+  }
+
+
+  @media (min-width: 768px){
+    .container {
+        margin: auto;
+        width: 500px;
+        overflow: auto;
+        padding: 3rem 2rem;
+      }
+      
+      #my-form {
+        padding: 2rem;
+        background: #f4f4f4;
+        margin: 1.5em;
+      }
+      
+      #my-form label {
+        display: block;
+      }
+      
+     
+      
+      .btn {
+        display: block;
+        width: 100%;
+        padding: 10px 15px;
+        border: 0;
+        background: #2d8e;
+        color: #fff;
+        border-radius: 5px;
+        margin: 5px 0;
+      }
+
+  }
