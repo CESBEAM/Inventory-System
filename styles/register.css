@@ -7,7 +7,7 @@
   body {
     font-family:montserrat;
     line-height: 1.6;
-    background: #697f90;
+    background: #dddddd;
   }
   
   .container {
@@ -62,7 +62,7 @@
     text-align: center;
     display: block;
     width: 100%;
-    padding: 10px 15px;
+    padding: 15px 15px;
     border: 0;
     background: #2d8e;
     color: #fff;
@@ -77,10 +77,6 @@
   .bg-dark {
     background: #333;
     color: #fff;
-  }
-
-  .forg{
-     margin-top: 2em;
   }
 
   .sign-link{
@@ -111,12 +107,13 @@
       .btn {
         display: block;
         width: 100%;
-        padding: 10px 15px;
+        padding: 15px 15px;
         border: 0;
         background: #2d8e;
         color: #fff;
         border-radius: 5px;
         margin: 5px 0;
+        cursor: pointer;
       }
 
   }

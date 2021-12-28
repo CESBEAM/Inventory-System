@@ -7,6 +7,7 @@
   body {
     font-family:montserrat;
     line-height: 1.6;
+    background: #dddddd;;
   }
   
   .container {
@@ -60,12 +61,13 @@
     text-align: center;
     display: block;
     width: 100%;
-    padding: 10px 15px;
+    padding: 15px 15px;
     border: 0;
     background: #2d8e;
     color: #fff;
     border-radius: 5px;
     margin: 1.5em 0;
+
   }
   
   .btn:hover {
@@ -77,9 +79,6 @@
     color: #fff;
   }
 
-  .forg{
-     margin-top: 2em;
-  }
 
   .sign-link{
     margin-top: 1em;
@@ -108,7 +107,7 @@
       .btn {
         display: block;
         width: 100%;
-        padding: 10px 15px;
+        padding: 15px 15px;
         border: 0;
         background: #2d8e;
         color: #fff;

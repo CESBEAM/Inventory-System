@@ -190,6 +190,7 @@ font-weight: bold;
         background: #0C695D;
         font-weight: bold;
         font-size: .7em;
+        cursor: pointer;
     }
 
     nav li {
@@ -256,12 +257,12 @@ font-weight: bold;
 
    .desk-btn{
        display: block;
-    
    }
 
    .desk-btn button{
+       position: absolute;
     margin-top: 0;
-  
+    cursor: pointer;
     font-family: montserrat;
     margin-left: 10em;
     border: 3px solid #152329;
