@@ -179,6 +179,7 @@ font-weight: bold;
       display: inline;
       text-decoration: none;
       color: #152329;
+      
     }
     
     nav .btn-reg-mob{
@@ -187,7 +188,7 @@ font-weight: bold;
         border-style: none;
         padding: 1.2em 3em;
         color: #FFFFFF;
-        background: #0C695D;
+        background: #152329;
         font-weight: bold;
         font-size: .7em;
         cursor: pointer;
@@ -221,7 +222,14 @@ font-weight: bold;
       
      
             }
+       
+            .details-content{
+                display: none;
+            }
 
+            .text-content{
+                display: none;
+            }
     
     .text-content-desk{
         font-family: montserrat;
@@ -259,7 +267,7 @@ font-weight: bold;
        display: block;
    }
 
-   .desk-btn button{
+   /* .desk-btn button{
        position: absolute;
     margin-top: 0;
     cursor: pointer;
@@ -268,9 +276,9 @@ font-weight: bold;
     border: 3px solid #152329;
     padding: 1.2em 5em;
     color: #152329;
-    background: #E0F2F2;
+    background: #152329;
     font-weight: bold;
-    }
+    } */
 
     
       
@@ -280,14 +288,6 @@ font-weight: bold;
         justify-content:flex-end;
         width: 30%;
     } */
-
-
-
-
-
-
-
-
 
 
     .button-area{

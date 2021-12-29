@@ -1,13 +1,3 @@
-<?php 
-
-session_start();
-if (!isset($_SESSION['canteenname'])){
-   
-}
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,7 +5,7 @@ if (!isset($_SESSION['canteenname'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bulsu Canteen</title>
-    <link rel="stylesheet" href="../styles/homeStyle.css">
+    <link rel="stylesheet" href="../styles/homeLogoutStyle.css">
   </head>
   <body>
     <aside>
@@ -29,14 +19,13 @@ if (!isset($_SESSION['canteenname'])){
       </header>
 
       <nav>
-        <a href="#" class="logomob"> <?php echo "Hi! ". $_SESSION['canteenname'];?></a>
+        <a href="contact.php" class="logomob">CONPYX</a>
         <ul>
-        <li><a href="productTab.php">Products</a></li>
           <li><a href="bulsu.php">Bulsu</a></li>
           <li><a href="contact.php">Contact us</a></li>
           <li>
-            <a href="logout.php">
-              <button class="btn-reg-mob">LOGOUT</button>
+            <a href="register.php">
+              <button class="btn-reg-mob">REGISTER</button>
             </a>
           </li>
         </ul>
@@ -51,12 +40,12 @@ if (!isset($_SESSION['canteenname'])){
         </div>
 
         <div class="button-area">
-          <!-- <a href ="login.php">
+          <a href ="login.php">
             <button class="btn-login">LOGIN</button>
-          </a> -->
+          </a>
 
-          <a href ="logout.php">
-            <button class="btn-reg">LOGOUT</button>
+          <a href ="register.php">
+            <button class="btn-reg">REGISTER</button>
           </a>
         </div>
 
@@ -83,11 +72,11 @@ if (!isset($_SESSION['canteenname'])){
         <img src="../Images/deskviewImg.svg" alt="">
       </div>
 
-      <!-- <div class="desk-btn">
+      <div class="desk-btn">
         <a href ="login.php">
           <button class="desk-login">LOGIN</button>
         </a>
-      </div> -->
+      </div>
     </div>
 
     <script>

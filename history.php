@@ -1,6 +1,9 @@
 <?php 
 
 session_start();
+if (!isset($_SESSION['canteenname'])){
+    header("Location: login.php");
+}
 
 ?>
 
@@ -26,7 +29,7 @@ session_start();
                 </ul>
 
                 <div class="btn-logout">
-                <ul><li><a href="home.php"><img src="../icons/logout.svg"> Logout</a></li></ul>
+                   <ul><li><a href="logout.php"><img src="../icons/logout.svg"> Logout</a></li></ul>
                 </div>
 
             </div>
