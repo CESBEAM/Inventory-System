@@ -3,10 +3,10 @@
  include 'configure.php';
   
  if(isset($_POST['submit'])){
-    $username = $_POST['canteenname'];
-    $username = $_POST['email'];
-    $username = $_POST['password'];
-    $username = $_POST['canteenname'];
+    $canteenname = $_POST['canteenname'];
+    $email = $_POST['email'];
+    $password = md5($_POST['password']);
+    $conpassword = md5($_POST['conpassword']);
  }
 ?>
 
@@ -42,7 +42,7 @@
 
           <div>
             <label for="con-password">Confirm Password</label>
-            <input type="password" id="con-password" required>
+            <input name="conpassword" type="password" id="con-password" required>
           </div>
 
           <button name="submit" class="btn" value="SIGN UP">SIGN UP</button>
