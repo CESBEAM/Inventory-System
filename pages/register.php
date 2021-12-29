@@ -7,6 +7,16 @@
     $email = $_POST['email'];
     $password = md5($_POST['password']);
     $conpassword = md5($_POST['conpassword']);
+
+    if($password == $conpassword){
+        $sql =  "INSERT INTO users (canteenname, email, password)VALUES ('$canteenname', '$email', '$password')";
+        $result = mysqli_query($conn, $sql);
+        if (!$result){
+          echo "<script>alert('Opps! Something wrong went.')</script>";
+        }
+    } else {
+      echo "<script>alert('Password not matched.')</script>";
+    }
  }
 ?>
 
