@@ -1,3 +1,10 @@
+<?php 
+
+session_start();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,16 +17,16 @@
     <body>
         <div class="wrapper">
             <div class="sidebar">
-                <h2>Welcome! Name</h2>
+                <h2><?php echo "Welcome! ". $_SESSION['canteenname'];?></h2>
                 <ul>
-                    <li><a href="../pages/home.html"> <img src="../icons/home.svg"> Home</a></li>
-                    <li><a href="../pages/productTab.html"><img src="../icons/products.svg"> Products</a></li>
-                    <li><a href="../pages/statistics.html"><img src="../icons/statistics.svg"> Statistics</a></li>
-                    <li><a href="../pages/history.html"><img src="../icons/history.svg"> History</a></li>
+                <li><a href="home.php"> <img src="../icons/home.svg"> Home</a></li>
+                    <li><a href="productTab.php"><img src="../icons/products.svg"> Products</a></li>
+                    <li><a href="statistics.php"><img src="../icons/statistics.svg"> Statistics</a></li>
+                    <li><a href="history.php"><img src="../icons/history.svg"> History</a></li>
                 </ul>
 
                 <div class="btn-logout">
-                <ul><li><a href="#"><img src="../icons/logout.svg"> Logout</a></li></ul>
+                <ul><li><a href="home.php"><img src="../icons/logout.svg"> Logout</a></li></ul>
                 </div>
 
             </div>

@@ -1,11 +1,10 @@
-<?php 
-
-session_start();
-if (isset($_SESSION['canteenname'])){
-    header("Location: login.php");
-}
-
+<?php
+  session_start();
+  session_destroy();
+  
+  header("Location: home.php");
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -59,7 +58,7 @@ if (isset($_SESSION['canteenname'])){
         </div>
 
         <div class="details-content">
-          <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium ratione aliquam esse a voluptas sed fugiat ipsam ut, numquam dolorem repellendus non molestias! Quisquam vel soluta velit. Ea repellat minus sint harum, ut eum similique sed dolore accusantium eos nostrum tempora optio nesciunt neque numquam dicta soluta aut omnis ad perferendis alias obcaecati quis at. Facere accusantium eos enim. Quasi corrupti harum in tempore odit, fugiat, alias, voluptatibus itaque quibusdam fuga cupiditate id delectus rerum! Vero molestiae neque earum porro quaerat cum minus rem atque. Rem quasi mollitia voluptatum, repellendus dolor maxime animi dolorum recusandae. Debitis voluptatem aperiam temporibus nostrum!</p> -->
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium ratione aliquam esse a voluptas sed fugiat ipsam ut, numquam dolorem repellendus non molestias! Quisquam vel soluta velit. Ea repellat minus sint harum, ut eum similique sed dolore accusantium eos nostrum tempora optio nesciunt neque numquam dicta soluta aut omnis ad perferendis alias obcaecati quis at. Facere accusantium eos enim. Quasi corrupti harum in tempore odit, fugiat, alias, voluptatibus itaque quibusdam fuga cupiditate id delectus rerum! Vero molestiae neque earum porro quaerat cum minus rem atque. Rem quasi mollitia voluptatum, repellendus dolor maxime animi dolorum recusandae. Debitis voluptatem aperiam temporibus nostrum!</p>
         </div>
       </div>
     </main>

@@ -3,6 +3,12 @@
  include 'configure.php';
  
   error_reporting(0);
+  
+  session_start();
+
+  if (isset($_SESSION['canteenname'])){
+    header("Location: login.php");
+}
 
  if(isset($_POST['submit'])){
     $canteenname = $_POST['canteenname'];
@@ -73,7 +79,7 @@
 
         <button name="submit" class="btn" value="SIGN UP">SIGN UP</button>
 
-        <div class="sign-link">Already have an account?<a href="../pages/login.html"> Sign in</a></div>
+        <div class="sign-link">Already have an account?<a href="login.php"> Sign in</a></div>
       </form>
     </section>
   </body>

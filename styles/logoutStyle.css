@@ -1,0 +1,296 @@
+body,html{
+    background: #0C695D;
+    margin: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #E0F2F2;
+}
+
+.menu{
+    cursor: pointer;
+}
+
+aside{
+    flex: 1;
+    padding: 2em 2em;
+    text-align: center;   
+
+    color: #E0F2F2;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+nav{
+    background: #E0F2F2;
+}
+
+nav .logomob{
+    display: none;
+}
+.active{
+    position: absolute;
+    display: block;
+    background: #E0F2F2;
+    width: 50%;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+ul li a{
+    margin-top: 3em;
+    display: block;
+    padding:  .5em 0;
+    text-decoration: none;
+    color: #152329;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+main{
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content img{
+   margin: 4em auto;
+   display: flex;
+   align-items: center;
+}
+
+.text-content h1{
+   margin: 0 2em;
+   text-align: center;
+   font-family: montserrat;
+   color: #E0F2F2;
+   font-size: 1.5em;
+}
+
+/* .text-content p{
+    padding: 2em 5em;
+    text-align: justify;
+    font-family: montserrat;
+    color: #E0F2F2;
+    font-size: .5em;
+    line-height: 1.7em;
+ } */
+
+ .details-content p{
+    padding: 0 5em;
+    text-align: justify;
+    font-family: montserrat;
+    color: #E0F2F2;
+    font-size: .5em;
+    line-height: 1.7em;
+ }
+
+
+.button-area{
+    display: flex;
+    gap: 1em;
+    padding: 30px 10%;
+    margin: 0;
+    justify-content: center;
+}
+
+.button-area .btn-login{
+font-family: montserrat;
+flex: 1;
+margin: 0;
+border: 5px solid #E0F2F2;
+padding: 1.2em 3em;
+text-align: center;
+color: #E0F2F2;
+background: #0C695D;
+font-weight: bold;
+}
+
+.button-area .btn-reg{
+font-family: montserrat;
+flex: 1;
+margin: 0;
+border: 5px solid #E0F2F2;
+padding: 1.2em 2em;
+text-align: center;
+color: #E0F2F2;
+background: #0C695D;
+font-weight: bold;
+}
+
+.desk-version img{
+    display: none;
+}
+
+.text-content-desk{
+    display: none;
+}
+
+.desk-text{
+    display: none;
+}
+.desk-btn{
+    display: none;
+}
+
+.btn-reg-mob{
+    display: none;
+}
+
+@media (min-width: 768px){
+      body{
+        background: #E0F2F2;
+        height: 100%;
+        
+    }
+    .logo{
+        display: none;
+    }
+
+    .menu img{
+      display: none;
+    }
+
+
+    nav{
+       padding: 2em 3.4em;
+       justify-content: space-between;
+        display: flex;
+        align-items: center;
+       
+    }
+    
+   nav .logomob{
+      display: inline;
+      text-decoration: none;
+      color: #152329;
+    }
+    
+    nav .btn-reg-mob{
+        display: inline;
+        font-family: montserrat;
+        border-style: none;
+        padding: 1.2em 3em;
+        color: #FFFFFF;
+        background: #0C695D;
+        font-weight: bold;
+        font-size: .7em;
+        cursor: pointer;
+    }
+
+    nav li {
+        display: inline-flex;
+    
+    }
+    nav ul {
+       
+        display: block;
+    }
+
+    nav li a{
+        font-size: small;
+        margin-top: 0;
+        padding: 0 2em;
+    }
+
+    .main-content img{
+        display: none;
+    }
+
+    .desk-version{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "text-content-desk desk"
+      
+     
+            }
+
+    
+    .text-content-desk{
+        font-family: montserrat;
+        grid-area: text-content-desk;
+        color: #152329;
+        display: flex;
+        text-align: justify;
+        font-size: .8em;
+        margin: 0 7em;
+    }
+
+    .desk-text{
+        font-family: montserrat;
+        grid-area: text-content-desk;
+        color: #152329;
+        display: flex;
+        text-align: justify;
+        font-size: .8em;
+        margin-top: 10em;
+        padding: 0 7em;
+        line-height: 1.5em;
+    } 
+      
+    .desk-img img{
+       display: flex;
+       grid-area: desk-img;       
+       justify-content: center;
+       align-items: center;
+       width: 50%;
+       margin: auto;
+      
+   } 
+
+   .desk-btn{
+       display: block;
+   }
+
+   .desk-btn button{
+       position: absolute;
+    margin-top: 0;
+    cursor: pointer;
+    font-family: montserrat;
+    margin-left: 10em;
+    border: 3px solid #152329;
+    padding: 1.2em 5em;
+    color: #152329;
+    background: #E0F2F2;
+    font-weight: bold;
+    }
+
+    
+      
+
+    /* .desk-image{
+        display: flex;
+        justify-content:flex-end;
+        width: 30%;
+    } */
+
+
+
+
+
+
+
+
+
+
+    .button-area{
+        display: none;
+    }
+}
