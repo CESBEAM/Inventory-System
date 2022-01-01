@@ -61,19 +61,19 @@
   
   .wrapper .main_content img{
       flex: 1;
-      margin-top: 2.5em;
+      margin-top: 3em;
       margin-left: 3em;
       position: absolute;
   }
 
   .wrapper .main_content .header h2{
-    margin-top: 1.7em;
-    margin-left: 5em;
+    margin-top: 1.5em;
+    margin-left: 3.2em;
     color: black;
   }
 
   .wrapper .main_content .header p{
-    margin-left: 7.5em;
+    margin-left: 6.5em;
     color: black;
     font-weight: 300;
   }
@@ -87,6 +87,13 @@
   .wrapper .main_content .info div{
     margin-bottom: 20px;
   }
+
+
+
+  /*Start Here! for the CRUD*/
+ /* button[type='button'] {
+    background: blue;
+  } */
   
   @media (max-height: 500px){
     .social_media{
