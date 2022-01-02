@@ -1,10 +1,8 @@
 <?php 
 
-    $con=new mysqli('localhost','root', 'admin12345', 'conpyx');
+    $con=new mysqli('localhost','root', '', 'conpyx');
     
-    if($con){
-        echo "Connection Successful";
-    }else{
+    if(!$con){
         die(mysqli_error($con));
     }
 ?>

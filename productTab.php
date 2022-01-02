@@ -60,11 +60,6 @@ if (!isset($_SESSION['canteenname'])){
                     <p>This is where you can manage all your products and other stuffs.</p>
                     </div>
 
-                   <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary mx-5 mt-3" data-toggle="modal" data-target="#completeModal">
-                Add New Product
-                </button>
-
                 <!-- Modal -->
                 <div class="modal fade" id="completeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -90,21 +85,22 @@ if (!isset($_SESSION['canteenname'])){
 
                     <div class="form-group">
                     <label for="nameProduct">Name</label>
-                    <input type="text" class="form-control" id="nameProduct" aria-describedby="emailHelp" placeholder="Name of the product">
+                    <input type="text" class="form-control" id="nameProduct" placeholder="Name of the product">
                    </div>
                 
+                   
                     <div class="input-group mb-3"> 
                     <div class="input-group-prepend">
                         <span class="input-group-text">Unit Price ₱</span>
                     </div>
-                    <input type="number" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+                    <input type="number" class="form-control" id="unitPrice">
                     </div>
 
                     <div class="input-group mb-3"> 
                     <div class="input-stock-prepend">
                         <span class="input-group-text">Stock</span>
                     </div>
-                    <input type="number" class="form-control">
+                    <input type="number" class="form-control" id="stock">
                     <select class="status-prepend" id="status">
                         <option>Available</option>
                         <option>Low</option>
@@ -113,13 +109,17 @@ if (!isset($_SESSION['canteenname'])){
                     </div>
 
                     <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-primary" onclick="addproduct()">Submit</button>
+
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                        </div>
                     </div>
                 </div>
                 </div>
 
+                <button type="button" class="btn btn-primary mx-5 mt-3" data-toggle="modal" data-target="#completeModal">
+                Add New Product
+                </button>
 
                
 
@@ -131,11 +131,41 @@ if (!isset($_SESSION['canteenname'])){
             </div>
         </div>
 
+       
+
         <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+        <script>
+               function addproduct(){
+                var categoryAdd=$('#foodCategory').val();
+                var nameAdd=$('#nameProduct').val();
+                var priceAdd=$('#unitPrice').val();
+                var stockAdd=$('#stock').val();
+                var statusAdd=$('#status').val();
+
+                $.ajax({
+                    url:"insert.php",
+                    type:'post',
+                    data:{
+                        categorySend:categoryAdd,
+                        nameSend:nameAdd,
+                        priceSend:priceAdd, 
+                        stockSend:stockAdd, 
+                        statusSend:statusAdd,
+                    },
+                    success:function(data,status){
+                        //function to display
+                        console.log(status);
+                    }
+                })
+
+                }
+
+        </script>
     </body>
     
 </html>
