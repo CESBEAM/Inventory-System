@@ -19,7 +19,6 @@ if (!isset($_SESSION['canteenname'])){
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
         <style>
-
             .wrapper .main_content img{
                 flex: 1;
                 margin-top: 3.5em;
@@ -32,12 +31,6 @@ if (!isset($_SESSION['canteenname'])){
          .wrapper .sidebar ul li a{
                 text-decoration: none;
                 list-style: none;
-            }
-
-            .btn-primary{
-               
-                position: absolute;
-                flex-direction: 4;
             }
 
         </style>
@@ -83,24 +76,22 @@ if (!isset($_SESSION['canteenname'])){
                         </button>
                     </div>
                     <div class="modal-body">
-                    <form>
+                 
                     <div class="form-group">
-                        <label for="exampleFormControlSelect1">Food Category</label>
-                        <select class="form-control-prepend" id="exampleFormControlSelect1">
-                        <option>Food</option>
+                    <label for="foodCategory">Food Category</label>
+                    <select class="form-control" id="foodCategory">
+                    <option>Food</option>
                         <option>Snacks</option>
                         <option>Drinks</option>
                         <option>Launch Food</option>
                         <option>School Supplies</option>
-                        </select>
+                         </select>
                     </div>
 
-                    <div class="input-group mb-3"> 
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Name</span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Name of the product"">
-                    </div>
+                    <div class="form-group">
+                    <label for="nameProduct">Name</label>
+                    <input type="text" class="form-control" id="nameProduct" aria-describedby="emailHelp" placeholder="Name of the product">
+                   </div>
                 
                     <div class="input-group mb-3"> 
                     <div class="input-group-prepend">
@@ -110,22 +101,21 @@ if (!isset($_SESSION['canteenname'])){
                     </div>
 
                     <div class="input-group mb-3"> 
-                    <div class="input-group-prepend">
+                    <div class="input-stock-prepend">
                         <span class="input-group-text">Stock</span>
                     </div>
-                    <input type="number" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
-                    <select class="form-control-prepend" id="exampleFormControlSelect1">
+                    <input type="number" class="form-control">
+                    <select class="status-prepend" id="status">
                         <option>Available</option>
                         <option>Low</option>
                         </select>
                     </div>
+                    </div>
 
-                    </form>
-                    </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                       </div>
                     </div>
                 </div>
                 </div>
