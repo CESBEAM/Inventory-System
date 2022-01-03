@@ -73,9 +73,9 @@ if (!isset($_SESSION['canteenname'])){
                     <div class="modal-body">
                  
                     <div class="form-group">
-                    <label for="foodCategory">Food Category</label>
-                    <select class="form-control" id="foodCategory">
-                    <option>Food</option>
+                    <label for="foodCategory">Category</label>
+                    <select class="form-control" id="completecategory">
+                        <option>Food</option>
                         <option>Snacks</option>
                         <option>Drinks</option>
                         <option>Launch Food</option>
@@ -85,7 +85,7 @@ if (!isset($_SESSION['canteenname'])){
 
                     <div class="form-group">
                     <label for="nameProduct">Name</label>
-                    <input type="text" class="form-control" id="nameProduct" placeholder="Name of the product">
+                    <input type="text" class="form-control" id="completename" placeholder="Name of the product">
                    </div>
                 
                    
@@ -93,19 +93,20 @@ if (!isset($_SESSION['canteenname'])){
                     <div class="input-group-prepend">
                         <span class="input-group-text">Unit Price ₱</span>
                     </div>
-                    <input type="number" class="form-control" id="unitPrice">
+                    <input type="number" class="form-control" id="completeprice">
                     </div>
 
                     <div class="input-group mb-3"> 
                     <div class="input-stock-prepend">
                         <span class="input-group-text">Stock</span>
                     </div>
-                    <input type="number" class="form-control" id="stock">
-                    <select class="status-prepend" id="status">
+                    <input type="number" class="form-control" id="completestock">
+                    <select class="status-prepend" id="completestatus">
                         <option>Available</option>
                         <option>Low</option>
                         </select>
                     </div>
+
                     </div>
 
                     <div class="modal-footer">
@@ -141,11 +142,11 @@ if (!isset($_SESSION['canteenname'])){
 
         <script>
                function addproduct(){
-                var categoryAdd=$('#foodCategory').val();
-                var nameAdd=$('#nameProduct').val();
-                var priceAdd=$('#unitPrice').val();
-                var stockAdd=$('#stock').val();
-                var statusAdd=$('#status').val();
+                var categoryAdd=$('#completecategory').val();
+                var nameAdd=$('#completename').val();
+                var priceAdd=$('#completeprice').val();
+                var stockAdd=$('#completestock').val();
+                var statusAdd=$('#completestatus').val();
 
                 $.ajax({
                     url:"insert.php",
