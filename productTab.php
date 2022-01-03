@@ -118,17 +118,13 @@ if (!isset($_SESSION['canteenname'])){
                 </div>
                 </div>
 
-                <button type="button" class="btn btn-primary mx-5 mt-3" data-toggle="modal" data-target="#completeModal">
+                <button type="button" class="btn btn-primary mx-5 mt-3 my-3" data-toggle="modal" data-target="#completeModal">
                 Add New Product
                 </button>
 
-               
+               <div id="displayDataTable"></div>
 
-                <div class="info">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
+
             </div>
         </div>
 
@@ -141,6 +137,23 @@ if (!isset($_SESSION['canteenname'])){
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
         <script>
+
+                //display function
+                function displayData(){
+                    var displayData="true";
+                    $.ajax({
+                        url:"display.php",
+                        type:'post',
+                        data:{
+                            displaySend:displayData
+                        },
+                        success:function(data,status){
+                         $('#displayDataTable').html(data);
+
+                        }
+                    });
+                }
+
                function addproduct(){
                 var categoryAdd=$('#completecategory').val();
                 var nameAdd=$('#completename').val();
@@ -160,9 +173,10 @@ if (!isset($_SESSION['canteenname'])){
                     },
                     success:function(data,status){
                         //function to display
-                        console.log(status);
+                        // console.log(status);
+                        displayData();
                     }
-                })
+                });
 
                 }
 
