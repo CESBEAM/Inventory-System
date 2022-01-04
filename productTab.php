@@ -113,10 +113,71 @@ if (!isset($_SESSION['canteenname'])){
                     <button type="button" class="btn btn-primary" onclick="addproduct()">Submit</button>
 
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                   
                        </div>
                     </div>
                 </div>
                 </div>
+
+                <!-- update modal -->
+                <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Update details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                 
+                    <div class="form-group">
+                    <label for="updatecategory">Category</label>
+                    <select class="form-control" id="updatecategory">
+                        <option>Food</option>
+                        <option>Snacks</option>
+                        <option>Drinks</option>
+                        <option>Launch Food</option>
+                        <option>School Supplies</option>
+                         </select>
+                    </div>
+
+                    <div class="form-group">
+                    <label for="updatename">Name</label>
+                    <input type="text" class="form-control" id="updatename" placeholder="Name of the product">
+                   </div>
+                
+                   
+                    <div class="input-group mb-3"> 
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Unit Price ₱</span>
+                    </div>
+                    <input type="number" class="form-control" id="updateprice">
+                    </div>
+
+                    <div class="input-group mb-3"> 
+                    <div class="input-stock-prepend">
+                        <span class="input-group-text">Stock</span>
+                    </div>
+                    <input type="number" class="form-control" id="updatestock">
+                    <select class="status-prepend" id="updatestatus">
+                        <option>Available</option>
+                        <option>Low</option>
+                        </select>
+                    </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="updateDetails()">Update</button>
+
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    <input type="hidden" id="hiddendata">
+                       </div>
+                    </div>
+                </div>
+                </div>
+
 
                 <button type="button" class="btn btn-primary mx-5 mt-3 my-3" data-toggle="modal" data-target="#completeModal">
                 Add New Product
@@ -137,7 +198,9 @@ if (!isset($_SESSION['canteenname'])){
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
         <script>
-
+            $(document).ready(function(){
+                displayData();
+            });
                 //display function
                 function displayData(){
                     var displayData="true";
@@ -174,10 +237,63 @@ if (!isset($_SESSION['canteenname'])){
                     success:function(data,status){
                         //function to display
                         // console.log(status);
+                        $('#completeModal').modal('hide');
                         displayData();
                     }
                 });
+                }
 
+                //delete record
+                function deleteProduct(deleteno){
+                    $.ajax({
+                        url:"delete.php",
+                        type:'post',
+                        data:{
+                            deletesend:deleteno
+                        },
+                        success:function(data,status){
+                            displayData();
+                        }
+                    });
+                }
+
+                //update function
+                function updateProduct(updateno){
+                    $('#hiddendata').val(updateno);
+
+                    $.post("update.php",{updateno:updateno},function(data,status){
+                        var userno=JSON.parse(data);
+                        $('#updatecategory').val(userno.category);
+                        $('#updatename').val(userno.name);
+                        $('#updateprice').val(userno.price);
+                        $('#updatestock').val(userno.stock);
+                        $('#updatestatus').val(userno.status);
+                     
+                    });
+
+                    $('#updateModal').modal("show");
+                }
+
+                //onclick update event Details
+                function updateDetails(){
+                    var updatecategory=$('#updatecategory').val();
+                    var updatename=$('#updatename').val();
+                    var updateprice=$('#updateprice').val();
+                    var updatestock=$('#updatestock').val();
+                    var updatestatus=$('#updatestatus').val();
+                    var hiddendata=$('#hiddendata').val();
+
+                    $.post("update.php",{
+                        updatecategory:updatecategory,
+                        updatename:updatename,
+                        updateprice:updateprice,
+                        updatestock:updatestock,
+                        updatestatus:updatestatus,
+                        hiddendata:hiddendata
+                        },function(data,status){
+                        $('#updateModal').modal('hide');
+                        displayData();
+                    });
                 }
 
         </script>
