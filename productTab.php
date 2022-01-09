@@ -60,6 +60,7 @@ if (!isset($_SESSION['canteenname'])){
                     <p>This is where you can manage all your products and other stuffs.</p>
                     </div>
 
+                    <!--Add new Product-->
                 <!-- Modal -->
                 <div class="modal fade" id="completeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -118,6 +119,69 @@ if (!isset($_SESSION['canteenname'])){
                     </div>
                 </div>
                 </div>
+
+                <!--end of Add new product-->
+
+
+
+                <!-- sellsModal -->
+                <div class="modal fade" id="sellsModal" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Sells Product</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                 
+                    <div class="form-group">
+                    <label for="sellscategory">sellsCategory</label>
+                    <select class="form-control" id="sellscategory">
+                        <option>Food</option>
+                        <option>Snacks</option>
+                        <option>Drinks</option>
+                        <option>Launch Food</option>
+                        <option>School Supplies</option>
+                         </select>
+                    </div>
+
+                     <div class="form-group">
+                    <label for="sellsproduct">Product Tag</label>
+                    <select class="form-control" id="sellsproduct">
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                        <option></option>
+                         </select>
+                    </div>
+                
+                   
+                    <div class="input-group mb-3"> 
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Quanty</span>
+                    </div>
+                    <input type="number" class="form-control" id="sellsprice">
+                    </div>
+
+                    <div class="form-group">
+                    <label for="totalsales">Total Sales: </label>
+                   </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="">Proceed</button>
+
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                   
+                       </div>
+                    </div>
+                </div>
+                </div>
+
 
                 <!-- update modal -->
                 <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -178,9 +242,14 @@ if (!isset($_SESSION['canteenname'])){
                 </div>
                 </div>
 
+                <!-- 2 buttons add and work product -->
 
                 <button type="button" class="btn btn-primary mx-5 mt-3 my-3" data-toggle="modal" data-target="#completeModal">
                 Add New Product
+                </button>
+
+                <button type="button" class="btn btn-primary mx-5 mt-3 my-4" data-toggle="modal" data-target="#workModal">
+                Work Product
                 </button>
 
                <div id="displayDataTable"></div>
