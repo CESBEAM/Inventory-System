@@ -328,7 +328,7 @@ if (!isset($_SESSION['canteenname'])){
                         //function to display
                         // console.log(status);
                         $('#completeModal').modal('hide');
-                        displayData();
+                        load_data();
                     }
                 });
                 }
