@@ -39,6 +39,7 @@ if(mysqli_num_rows($result) > 0)
 				<td>'.$row["stock"].'</td>
                 <td>'.$row["status"].'</td>
 				<td>
+
         			<button class = "btn btn-success" onclick="updateProduct('.$row["no"].')">Update</button>
         			<button class = "btn btn-danger" onclick="deleteProduct('.$row["no"].')">Delete</button>
         		</td>
