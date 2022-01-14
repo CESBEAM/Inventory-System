@@ -31,7 +31,7 @@ if(isset($_POST['displaySend'])){
         <td>'.$stock.'</td>
         <td>'.$status.'</td>
         <td>
-        <button class = "btn btn-dark" onclick="updateProduct('.$no.')">Update</button>
+        <button class = "btn btn-primary" onclick="updateProduct('.$no.')">Update</button>
         <button class = "btn btn-danger" onclick="deleteProduct('.$no.')">Delete</button>
         </td>
       </tr>';

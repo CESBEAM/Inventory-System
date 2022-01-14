@@ -116,7 +116,7 @@ if (!isset($_SESSION['canteenname'])){
                     </div>
 
                     <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" onclick="addproduct()">Submit</button>
+                    <button type="button" class="btn btn-success" onclick="addproduct()">Submit</button>
 
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                    
@@ -234,7 +234,7 @@ if (!isset($_SESSION['canteenname'])){
                     </div>
 
                     <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" onclick="updateDetails()">Update</button>
+                    <button type="button" class="btn btn-success" onclick="updateDetails()">Update</button>
 
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                     <input type="hidden" id="hiddendata">
@@ -255,16 +255,22 @@ if (!isset($_SESSION['canteenname'])){
 
                 <!-- search bar -->
 
-                <div class="form-group">
+                <!-- <div class="form-group">
 				<div class="input-group">
 					<span class="input-group-addon">Search</span>
 					<input type="text" name="search_text" id="search_text" placeholder="Search by Customer Details" class="form-control" />
 				</div>
-			</div>
+		    	</div> -->
+
+            <form class="form-inline">
+              <input class="form-control mr-sm-2" type="search" id="search_text" placeholder="Search" aria-label="Search">
+             
+             </form>
             
 
             <!-- display database table -->
 
+               <!-- No need for displayDataTable -->
                <!-- <div id="displayDataTable"></div> -->
                <div id="result"></div>
             </div>
@@ -327,7 +333,7 @@ if (!isset($_SESSION['canteenname'])){
                         //function to display
                         // console.log(status);
                         $('#completeModal').modal('hide');
-                        displayData();
+                        load_data();
                     }
                 });
                 }
@@ -341,7 +347,7 @@ if (!isset($_SESSION['canteenname'])){
                             deletesend:deleteno
                         },
                         success:function(data,status){
-                            displayData();
+                            load_data();
                         }
                     });
                 }
@@ -381,7 +387,20 @@ if (!isset($_SESSION['canteenname'])){
                         hiddendata:hiddendata
                         },function(data,status){
                         $('#updateModal').modal('hide');
-                        displayData();
+                        load_data();
+                    });
+                }
+
+                function load_data(query)
+                {
+                    $.ajax({
+                        url:"search.php",
+                        method:"post",
+                        data:{query:query},
+                        success:function(data)
+                        {
+                            $('#result').html(data);
+                        }
                     });
                 }
 
@@ -390,18 +409,7 @@ if (!isset($_SESSION['canteenname'])){
                 
                 $(document).ready(function(){
 	            load_data();
-	            function load_data(query)
-	{
-		$.ajax({
-			url:"search.php",
-			method:"post",
-			data:{query:query},
-			success:function(data)
-			{
-				$('#result').html(data);
-			}
-		});
-	}
+	            
 	
 	$('#search_text').keyup(function(){
 		var search = $(this).val();
