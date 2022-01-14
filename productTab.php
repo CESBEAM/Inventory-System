@@ -255,20 +255,28 @@ if (!isset($_SESSION['canteenname'])){
 
                 <!-- search bar -->
 
-            <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-
-
-            <!-- display database table -->
-               <div id="displayDataTable"></div>
+                <div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon">Search</span>
+					<input type="text" name="search_text" id="search_text" placeholder="Search by Customer Details" class="form-control" />
+				</div>
+			</div>
             
 
+            <!-- display database table -->
+
+               <!-- <div id="displayDataTable"></div> -->
+               <div id="result"></div>
             </div>
 
-           
+
+            
+
+
         </div>
+    
+           
+       
 
        
 
@@ -377,6 +385,36 @@ if (!isset($_SESSION['canteenname'])){
                     });
                 }
 
+                //search function
+
+                
+                $(document).ready(function(){
+	            load_data();
+	            function load_data(query)
+	{
+		$.ajax({
+			url:"search.php",
+			method:"post",
+			data:{query:query},
+			success:function(data)
+			{
+				$('#result').html(data);
+			}
+		});
+	}
+	
+	$('#search_text').keyup(function(){
+		var search = $(this).val();
+		if(search != '')
+		{
+			load_data(search);
+		}
+		else
+		{
+			load_data();			
+		}
+	});
+});
               
         </script>
     </body>
