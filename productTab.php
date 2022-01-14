@@ -265,6 +265,7 @@ if (!isset($_SESSION['canteenname'])){
 
             <!-- display database table -->
 
+               <!-- No need for displayDataTable -->
                <!-- <div id="displayDataTable"></div> -->
                <div id="result"></div>
             </div>
