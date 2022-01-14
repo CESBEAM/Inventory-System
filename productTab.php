@@ -65,8 +65,8 @@ if (!isset($_SESSION['canteenname'])){
                     <p>This is where you can manage all your products and other stuffs.</p>
                     </div>
 
+                    
                     <!--Add new Product-->
-                <!-- Modal -->
                 <div class="modal fade" id="completeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -243,7 +243,7 @@ if (!isset($_SESSION['canteenname'])){
                 </div>
                 </div>
 
-                <!-- 2 buttons add and work product -->
+                <!-- 2 buttons add and sale product -->
 
                 <button type="button" class="btn btn-primary mx-5 mt-3 my-3" data-toggle="modal" data-target="#completeModal">
                 Add New Product
@@ -260,6 +260,8 @@ if (!isset($_SESSION['canteenname'])){
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
 
+
+            <!-- display database table -->
                <div id="displayDataTable"></div>
             
 
