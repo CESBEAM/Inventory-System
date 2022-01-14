@@ -33,6 +33,11 @@ if (!isset($_SESSION['canteenname'])){
                 list-style: none;
             }
 
+            .form-inline{
+                padding-left: 62em;
+                margin-bottom: 1em;
+            }
+
         </style>
 
     </head>
@@ -124,12 +129,12 @@ if (!isset($_SESSION['canteenname'])){
 
 
 
-                <!-- sellsModal -->
+                <!-- sales Modal -->
                 <div class="modal fade" id="sellsModal" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Sells Product</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Sales Product</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         </button>
@@ -137,24 +142,20 @@ if (!isset($_SESSION['canteenname'])){
                     <div class="modal-body">
                  
                     <div class="form-group">
-                    <label for="sellscategory">sellsCategory</label>
-                    <select class="form-control" id="sellscategory">
-                        <option>Food</option>
-                        <option>Snacks</option>
-                        <option>Drinks</option>
-                        <option>Launch Food</option>
-                        <option>School Supplies</option>
+                    <label for="sellscategory">Category</label>
+                    <select class="form-control" id="sellscategory" onchange="selCateg(this.value);">
+                        <option value="Food">Food</option>
+                        <option value="Snacks">Snacks</option>
+                        <option value="Drinks">Drinks</option>
+                        <option value="Launch">Launch Food</option>
+                        <option value="School">School Supplies</option>
                          </select>
                     </div>
 
-                     <div class="form-group">
+                     <div class="form-group" id="poll">
                     <label for="sellsproduct">Product Tag</label>
-                    <select class="form-control" id="sellsproduct">
-                        <option></option>
-                        <option></option>
-                        <option></option>
-                        <option></option>
-                        <option></option>
+                    <select class="form-control" id="poll">
+                        <option>Select Product</option>
                          </select>
                     </div>
                 
@@ -248,14 +249,23 @@ if (!isset($_SESSION['canteenname'])){
                 Add New Product
                 </button>
 
-                <button type="button" class="btn btn-primary mx-5 mt-3 my-4" data-toggle="modal" data-target="#workModal">
-                Work Product
+                <button type="button" class="btn btn-primary mx-5 mt-3 my-4" data-toggle="modal" data-target="#sellsModal">
+                Sale Product
                 </button>
 
-               <div id="displayDataTable"></div>
+                <!-- search bar -->
 
+            <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+
+               <div id="displayDataTable"></div>
+            
 
             </div>
+
+           
         </div>
 
        
@@ -365,6 +375,7 @@ if (!isset($_SESSION['canteenname'])){
                     });
                 }
 
+              
         </script>
     </body>
     
