@@ -1,47 +1,3 @@
-<?php
-   
- include 'configure.php';
- 
-  error_reporting(0);
-  
-  session_start();
-
-  if (isset($_SESSION['canteenname'])){
-    header("Location: login.php");
-}
-
- if(isset($_POST['submit'])){
-    $canteenname = $_POST['canteenname'];
-    $email = $_POST['email'];
-    $password = md5($_POST['password']);
-    $conpassword = md5($_POST['conpassword']);
-
-    if($password == $conpassword){
-        $sql = "SELECT * FROM users WHERE email = '$email'";
-        $result = mysqli_query($conn, $sql);
-        if (!$result -> num_rows > 0){
-          $sql =  "INSERT INTO users (canteenname, email, password) VALUES ('$canteenname', '$email', '$password')";
-          $result = mysqli_query($conn, $sql);
-          if ($result){
-            echo "<script>alert('Account Registration Success.')</script>";
-            $canteenname = "";
-            $email = "";
-            $_POST['password'] = "";
-            $_POST['conpassword'] = "";
-          }else{
-            echo "<script>alert('Opps! Something wrong went.')</script>";
-        }
-          
-        } else {
-          echo "<script>alert('Email Already Exist.')</script>";
-        }
-        
-    } else {
-      echo "<script>alert('Password not matched.')</script>";
-    }
- }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -53,28 +9,48 @@
   </head>
   <body>
     <section class="container">
-      <form action="" method="POST" id="my-form">
+      <form action="regconfig.php" method="post" id="my-form">
         <h2>Sign up</h2>
-        <div class="msg"></div>
+
+        <?php if (isset($_GET['error'])) { ?>
+     		<p class="error"><?php echo $_GET['error']; ?></p>
+     	<?php } ?>
+
+          <?php if (isset($_GET['success'])) { ?>
+               <p class="success"><?php echo $_GET['success']; ?></p>
+          <?php } ?>
 
         <div>
           <label for="canteenName">Canteen Name</label>
-          <input name ="canteenname" type="text" id="canteen-name" value = "<?php echo $canteenname; ?>" required>
+          <?php if (isset($_GET['canteenName'])) { ?>
+          <input type="text" name ="canteenname"  id="canteen-name" placeholder = "Enter canteen name" value="<?php echo $_GET['name']; ?>"><br>
+          <?php }else{ ?>
+               <input type="text" 
+                      name="canteenname" 
+                      placeholder="Enter canteen name"><br>
+          <?php }?>
         </div>
 
         <div>
           <label for="email-reg">Email</label>
-          <input name = "email" type="email" id="email-reg" value = "<?php echo $email; ?>" required>
+          <?php if (isset($_GET['email'])) { ?>
+          <input type="email" name = "email" id="email-reg" placeholder = "Enter your email" value="<?php echo $_GET['email']; ?>"><br>
+          <?php }else{ ?>
+               <input type="email" 
+                      name="email" 
+                      placeholder="Enter email"><br>
+          <?php }?>
+        
         </div>
 
         <div>
-          <label for="password">Password</label>
-          <input name = "password" type="password" id="password" value = "<?php echo $_POST['password']; ?>" required>
+          <label>Password</label>
+          <input type="password" name = "password" id="password" placeholder = "Enter your password"><br>
         </div>
 
         <div>
-          <label for="con-password">Confirm Password</label>
-          <input name ="conpassword" type="password" id="con-password" value = "<?php echo $_POST['conpassword']; ?>"  required>
+          <label>Confirm Password</label>
+          <input type="password" name ="conpassword" id="con-password" placeholder = "Re enter your password"><br>
         </div>
 
         <button name="submit" class="btn" value="SIGN UP">SIGN UP</button>
