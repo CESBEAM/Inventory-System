@@ -25,17 +25,16 @@ if (!isset($_SESSION['canteenname'])){
                 width: 3em;
             }
    
-            
          .wrapper .sidebar ul li a{
                 text-decoration: none;
                 list-style: none;
             }
 
             .form-inline{
+                display: flex;
                 padding-left: 62em;
-                margin-bottom: 1em;
+                padding-bottom: 1em;
             }
-
         </style>
 
     </head>
@@ -261,8 +260,7 @@ if (!isset($_SESSION['canteenname'])){
 		    	</div> -->
 
             <form class="form-inline">
-              <input class="form-control mr-sm-2" type="search" id="search_text" placeholder="Search" aria-label="Search">
-             
+              <input class="form-control mr-sm-2" type="search" id="search_text" placeholder="Search">
              </form>
             
 

@@ -1,118 +1,88 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family:montserrat;
-    line-height: 1.6;
-    background: #dddddd;;
-  }
-  
-  .container {
-    margin: auto;
-    
-    overflow: auto;
-    padding: 3rem 2rem;
-  }
-  
-  #my-form {
-    padding: 1em;
-    background: #f0efee;
-    margin: 1.5em;
-  }
-  
-  #my-form h2{
-    text-align: center;
-    background: #f4f4f4;
-    margin-bottom: 2em;
-  }
+*{
+  font-family: montserrat;
+}
 
-  #my-form P{
-    
-    background: #f4f4f4;
-    margin-bottom: 2em;
-  }
+.login-photo {
+  background: #dddddd;
+  padding: 126px 0;
+}
+
+.login-photo .image-holder {
+  display: table-cell;
+  width: auto;
+  height: 50px;
+  background: url(/Images/loginpic.svg);
   
-  #my-form label {
-    margin-top: .5em;
-    display: block;
-    font-weight: 600;
-  }
-  
-  #my-form input[type='email'] {
-    width: 100%;
-    padding: 1.1em;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
+}
 
-  #my-form input[type='password'] {
-    width: 100%;
-    padding: 1.1em;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  .btn {
-    text-align: center;
-    display: block;
-    width: 100%;
-    padding: 15px 15px;
-    border: 0;
-    background: #2d8e;
-    color: #fff;
-    border-radius: 5px;
-    margin: 1.5em 0;
+.login-photo .form-container {
+  display: table;
+  max-width: 900px;
+  width: 90%;
+  margin: 0 auto;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1)
+}
 
-  }
-  
-  .btn:hover {
-    background: #444;
-  }
-  
-  .bg-dark {
-    background: #333;
-    color: #fff;
-  }
+.login-photo form {
+  text-align: center;
+  display: table-cell;
+  width: 400px;
+  background-color: #dddddd;
+  padding: 70px 60px;
+  color: #6f7a85;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1)
+}
 
-
-  .sign-link{
-    margin-top: 1em;
+@media (max-width:991px) {
+  .register-photo form {
+      padding: 40px
   }
+}
 
+.login-photo form h2 {
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 30px
+}
 
-  @media (min-width: 768px){
-    .container {
-        margin: auto;
-        width: 500px;
-        overflow: auto;
-        padding: 3rem 2rem;
-      }
-      
-      #my-form {
-        padding: 2rem;
-        background: #f4f4f4;
-      }
-      
-      #my-form label {
-        display: block;
-      }
-      
-     
-      
-      .btn {
-        display: block;
-        width: 100%;
-        padding: 15px 15px;
-        border: 0;
-        background: #2d8e;
-        color: #fff;
-        border-radius: 5px;
-        margin: 5px 0;
-      }
+.login-photo form .form-control {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #dfe7f1;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+  color: inherit;
+  text-indent: 0px;
+  height: 40px
+}
 
-  }
+.login-photo form .btn-primary {
+ 
+  background: green;
+  border: none;
+  border-radius: 4px;
+  padding: 11px;
+  box-shadow: none;
+  margin-top: 35px;
+  text-shadow: none;
+  outline: none !important
+}
+
+.login-photo form .btn-primary:hover,
+.login-photo form .btn-primary:active {
+  background: green
+}
+
+.login-photo form .btn-primary:active {
+  transform: translateY(1px)
+}
+
+.login-photo form .already {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #6f7a85;
+  opacity: 0.9;
+  text-decoration: none
+}

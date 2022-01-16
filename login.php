@@ -25,36 +25,54 @@
   }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="../styles/loginStyle.css">
-  </head>
-  <body>
-    <section class="container">
-      <form action = "" method="POST" id="my-form">
-        <h2>Login</h2>
-        <p>To login enter your email and password below</p>
-        <div class="msg"></div>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <link rel="stylesheet" href="/styles/loginStyle.css">
+</head>
+<style>
+    .form-group #email ,#password{
+        margin-top: 1.5em;
+       border: #9F9F9F 1px solid;
+       border-radius: .5em;
+    }
+</style>
+<body>
+    <div class="login-photo">
+        <div class="form-container">
+            <div class="image-holder"></div>
+            <form method="post">
+                <h2 class="text-center">
+                    <img src="/icons/usericon.svg" alt="">
+                  Login </h2>
+                <p>To login enter your email and password 
+                    below</p>
 
-        <div>
-          <label for="email">Email</label>
-          <input type="email" id="email" placeholder="Enter email" name = "email" value = "<?php echo $email; ?>" required>
+                <div class="form-group">
+                    
+                    <input class="form-control"
+                    id="email" placeholder="Email" name = "email" value = "<?php echo $email; ?>" required>
+                </div>
+
+                <div class="form-group">
+                    <input class="form-control" type="password" id="password" placeholder="Password" name = "password" value = "<?php echo $_POST['password']; ?>" required>
+                </div>
+
+                
+             
+                <div class="form-group">
+                    <button class="btn btn-success btn-block" name = "submit" class="btn" value="LOGIN">LOGIN</button>
+
+                </div><a class="already" href="register.php">No account yet? Sign up here</a>
+            </form>
         </div>
-
-        <div>
-          <label for="password">Password</label>
-          <input type="password" id="password" placeholder="Enter password" name = "password" value = "<?php echo $_POST['password']; ?>" required>
-        </div>
-
-        <button name = "submit" class="btn" value="LOGIN">LOGIN</button>
-        <div class="sign-link">No account yet?<a href="register.php"> Sign up here</a></div>
-      </form>
-    </section>
-  </body>
+    </div>
+</body>
 </html>

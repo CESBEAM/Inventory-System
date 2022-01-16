@@ -16,6 +16,22 @@ if (!isset($_SESSION['canteenname'])){
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Statistics</title>
         <link rel="stylesheet" href="../styles/statisticsTabStyle.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+        <style>
+            .wrapper .main_content img{
+                flex: 1;
+                margin-top: 3.5em;
+                margin-left: 3em;
+                position: absolute;
+                width: 3em;
+            }
+   
+         .wrapper .sidebar ul li a{
+                text-decoration: none;
+                list-style: none;
+            }
+        </style>
     </head>
     <body>
         <div class="wrapper">
