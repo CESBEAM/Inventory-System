@@ -5,15 +5,15 @@ if(isset($_POST["query"]))
 {
 	$search = mysqli_real_escape_string($connect, $_POST["query"]);
 	$query = "
-	SELECT * FROM crud 
+	SELECT * FROM products 
 	WHERE name LIKE '%".$search."%'
-	OR no LIKE '%".$search."%'
+	OR id LIKE '%".$search."%'
 	OR category LIKE '%".$search."%'";
 }
 else
 {
 	$query = "
-	SELECT * FROM crud ORDER BY no";
+	SELECT * FROM products ORDER BY id";
 }
 $result = mysqli_query($connect, $query);
 if(mysqli_num_rows($result) > 0)
@@ -21,7 +21,7 @@ if(mysqli_num_rows($result) > 0)
 	$output .= '<div class="table-responsive">
 					<table class="table table bordered">
 						<tr>
-							<th>No</th>
+							<th>ID</th>
 							<th>Category</th>
 							<th>Product Name</th>
 							<th>Unit price</th>
@@ -32,16 +32,15 @@ if(mysqli_num_rows($result) > 0)
 	{
 		$output .= '
 			<tr>
-				<td>'.$row["no"].'</td>
+				<td>'.$row["id"].'</td>
 				<td>'.$row["category"].'</td>
 				<td>'.$row["name"].'</td>
 				<td>'.$row["price"].'</td>
 				<td>'.$row["stock"].'</td>
                 <td>'.$row["status"].'</td>
 				<td>
-
-        			<button class = "btn btn-success" onclick="updateProduct('.$row["no"].')">Update</button>
-        			<button class = "btn btn-danger" onclick="deleteProduct('.$row["no"].')">Delete</button>
+        			<button class = "btn btn-success" onclick="updateProduct('.$row["id"].')">Update</button>
+        			<button class = "btn btn-danger" onclick="deleteProduct('.$row["id"].')">Delete</button>
         		</td>
 			</tr>
 		';

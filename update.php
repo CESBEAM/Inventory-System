@@ -1,10 +1,10 @@
 <?php 
 include 'connect.php';
 
-    if(isset($_POST['updateno'])){
-        $product_no=$_POST['updateno'];
+    if(isset($_POST['updateid'])){
+        $product_id=$_POST['updateid'];
 
-        $sql="Select * from `crud` where no=$product_no";
+        $sql="Select * from `products` where id=$product_id";
         $result=mysqli_query($con,$sql);
         $response=array();
         while($row=mysqli_fetch_assoc($result)){
@@ -20,14 +20,14 @@ include 'connect.php';
     // update query
 
     if(isset($_POST['hiddendata'])){
-        $uniqueno=$_POST['hiddendata'];
+        $uniqueid=$_POST['hiddendata'];
         $category=$_POST['updatecategory'];
         $name=$_POST['updatename'];
         $price=$_POST['updateprice'];
         $stock=$_POST['updatestock'];
         $status=$_POST['updatestatus'];
 
-        $sql="update `crud` set category='$category',name='$name',price='$price',stock='$stock',status='$status' where no=$uniqueno";
+        $sql="update `products` set category='$category',name='$name',price='$price',stock='$stock',status='$status' where id=$uniqueid";
 
         $result=mysqli_query($con,$sql);
     }

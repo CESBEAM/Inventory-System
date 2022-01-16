@@ -6,8 +6,6 @@ if (!isset($_SESSION['canteenname'])){
 }
 
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -274,17 +272,8 @@ if (!isset($_SESSION['canteenname'])){
                <!-- <div id="displayDataTable"></div> -->
                <div id="result"></div>
             </div>
-
-
-            
-
-
         </div>
     
-           
-       
-
-       
 
         <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -353,16 +342,16 @@ if (!isset($_SESSION['canteenname'])){
                 }
 
                 //update function
-                function updateProduct(updateno){
-                    $('#hiddendata').val(updateno);
+                function updateProduct(updateid){
+                    $('#hiddendata').val(updateid);
 
-                    $.post("update.php",{updateno:updateno},function(data,status){
-                        var userno=JSON.parse(data);
-                        $('#updatecategory').val(userno.category);
-                        $('#updatename').val(userno.name);
-                        $('#updateprice').val(userno.price);
-                        $('#updatestock').val(userno.stock);
-                        $('#updatestatus').val(userno.status);
+                    $.post("update.php",{updateid:updateid},function(data,status){
+                        var userid=JSON.parse(data);
+                        $('#updatecategory').val(userid.category);
+                        $('#updatename').val(userid.name);
+                        $('#updateprice').val(userid.price);
+                        $('#updatestock').val(userid.stock);
+                        $('#updatestatus').val(userid.status);
                      
                     });
 
@@ -405,8 +394,7 @@ if (!isset($_SESSION['canteenname'])){
                 }
 
                 //search function
-
-                
+      
                 $(document).ready(function(){
 	            load_data();
 	            
