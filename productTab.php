@@ -137,7 +137,7 @@ if (!isset($_SESSION['canteenname'])){
                         </button>
                     </div>
                     <div class="modal-body">
-                 
+
                     <div class="form-group">
                     <label for="sellscategory">Category</label>
                     <select class="form-control" id="sellscategory" onchange="selCateg(this.value);">
@@ -149,11 +149,11 @@ if (!isset($_SESSION['canteenname'])){
                          </select>
                     </div>
 
-                     <div class="form-group" id="poll">
+                    <div class="form-group" id="poll">
                     <label for="sellsproduct">Product Tag</label>
                     <select class="form-control" id="poll">
                         <option>Select Product</option>
-                         </select>
+                    </select>
                     </div>
                 
                    
@@ -283,23 +283,23 @@ if (!isset($_SESSION['canteenname'])){
             $(document).ready(function(){
                 displayData();
             });
-                //display function
-                function displayData(){
-                    var displayData="true";
-                    $.ajax({
-                        url:"display.php",
-                        type:'post',
-                        data:{
-                            displaySend:displayData
-                        },
-                        success:function(data,status){
-                         $('#displayDataTable').html(data);
 
-                        }
-                    });
-                }
+            //display function
+            function displayData() {
+                var displayData="true";
+                $.ajax({
+                    url:"display.php",
+                    type:'post',
+                    data:{
+                        displaySend:displayData
+                    },
+                    success:function(data,status){
+                        $('#displayDataTable').html(data);
+                    }
+                });
+            }
 
-               function addproduct(){
+            function addproduct(){
                 var categoryAdd=$('#completecategory').val();
                 var nameAdd=$('#completename').val();
                 var priceAdd=$('#completeprice').val();
@@ -316,101 +316,93 @@ if (!isset($_SESSION['canteenname'])){
                         stockSend:stockAdd, 
                         statusSend:statusAdd,
                     },
-                    success:function(data,status){
+                    success:function(data,status) {
                         //function to display
                         // console.log(status);
                         $('#completeModal').modal('hide');
                         load_data();
                     }
                 });
-                }
+            }
 
-                //delete record
-                function deleteProduct(deleteno){
-                    $.ajax({
-                        url:"delete.php",
-                        type:'post',
-                        data:{
-                            deletesend:deleteno
-                        },
-                        success:function(data,status){
-                            load_data();
-                        }
-                    });
-                }
-
-                //update function
-                function updateProduct(updateid){
-                    $('#hiddendata').val(updateid);
-
-                    $.post("update.php",{updateid:updateid},function(data,status){
-                        var userid=JSON.parse(data);
-                        $('#updatecategory').val(userid.category);
-                        $('#updatename').val(userid.name);
-                        $('#updateprice').val(userid.price);
-                        $('#updatestock').val(userid.stock);
-                        $('#updatestatus').val(userid.status);
-                     
-                    });
-
-                    $('#updateModal').modal("show");
-                }
-
-                //onclick update event Details
-                function updateDetails(){
-                    var updatecategory=$('#updatecategory').val();
-                    var updatename=$('#updatename').val();
-                    var updateprice=$('#updateprice').val();
-                    var updatestock=$('#updatestock').val();
-                    var updatestatus=$('#updatestatus').val();
-                    var hiddendata=$('#hiddendata').val();
-
-                    $.post("update.php",{
-                        updatecategory:updatecategory,
-                        updatename:updatename,
-                        updateprice:updateprice,
-                        updatestock:updatestock,
-                        updatestatus:updatestatus,
-                        hiddendata:hiddendata
-                        },function(data,status){
-                        $('#updateModal').modal('hide');
+            //delete record
+            function deleteProduct(deleteno) {
+                $.ajax({
+                    url:"delete.php",
+                    type:'post',
+                    data:{
+                        deletesend:deleteno
+                    },
+                    success:function(data,status){
                         load_data();
-                    });
-                }
+                    }
+                });
+            }
 
-                function load_data(query)
-                {
-                    $.ajax({
-                        url:"search.php",
-                        method:"post",
-                        data:{query:query},
-                        success:function(data)
-                        {
-                            $('#result').html(data);
-                        }
-                    });
-                }
+            //update function
+            function updateProduct(updateid){
+                $('#hiddendata').val(updateid);
 
-                //search function
-      
-                $(document).ready(function(){
-	            load_data();
-	            
-	
-	$('#search_text').keyup(function(){
-		var search = $(this).val();
-		if(search != '')
-		{
-			load_data(search);
-		}
-		else
-		{
-			load_data();			
-		}
-	});
-});
-              
+                $.post("update.php", {updateid:updateid}, function(data,status) {
+                    var userid=JSON.parse(data);
+                    $('#updatecategory').val(userid.category);
+                    $('#updatename').val(userid.name);
+                    $('#updateprice').val(userid.price);
+                    $('#updatestock').val(userid.stock);
+                    $('#updatestatus').val(userid.status);
+                });
+
+                $('#updateModal').modal("show");
+            }
+
+            //onclick update event Details
+            function updateDetails(){
+                var updatecategory=$('#updatecategory').val();
+                var updatename=$('#updatename').val();
+                var updateprice=$('#updateprice').val();
+                var updatestock=$('#updatestock').val();
+                var updatestatus=$('#updatestatus').val();
+                var hiddendata=$('#hiddendata').val();
+
+                $.post("update.php", {
+                    updatecategory:updatecategory,
+                    updatename:updatename,
+                    updateprice:updateprice,
+                    updatestock:updatestock,
+                    updatestatus:updatestatus,
+                    hiddendata:hiddendata
+                    },function(data,status){
+                    $('#updateModal').modal('hide');
+                    load_data();
+                });
+            }
+
+            function load_data(query) {
+                $.ajax({
+                    url:"search.php",
+                    method:"post",
+                    data:{query:query},
+                    success:function(data)
+                    {
+                        $('#result').html(data);
+                    }
+                });
+            }
+
+            //search function
+            $(document).ready(function(){
+            load_data();
+
+            $('#search_text').keyup(function() {
+                var search = $(this).val();
+                if(search != '') {
+                    load_data(search);
+                }
+                else {
+                    load_data();
+                }
+            });
+        });
         </script>
     </body>
-    
 </html>
