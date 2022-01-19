@@ -394,7 +394,7 @@ if (!isset($_SESSION['canteenname'])){
                     method:"post",
                     data:{category:category},
                     success:function(data) {
-                        $("#products").html();
+                        $("#products").text("");
                         for(const name of JSON.parse(data)) {
                             $("#products").append("<option>" + name + "</option>");
                         }
