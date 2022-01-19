@@ -140,24 +140,23 @@ if (!isset($_SESSION['canteenname'])){
 
                     <div class="form-group">
                     <label for="sellscategory">Category</label>
-                    <select class="form-control" id="sellscategory" onchange="selCateg(this.value);">
+                    <select class="form-control" id="sellscategory" onchange="sales_product_update(this.value);">
                         <option value="Food">Food</option>
                         <option value="Snacks">Snacks</option>
                         <option value="Drinks">Drinks</option>
                         <option value="Launch">Launch Food</option>
                         <option value="School">School Supplies</option>
-                         </select>
+                    </select>
                     </div>
 
                     <div class="form-group" id="poll">
                     <label for="sellsproduct">Product Tag</label>
-                    <select class="form-control" id="poll">
+                    <select class="form-control" id="products">
                         <option>Select Product</option>
                     </select>
                     </div>
-                
-                   
-                    <div class="input-group mb-3"> 
+
+                    <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text">Quanty</span>
                     </div>
@@ -385,6 +384,19 @@ if (!isset($_SESSION['canteenname'])){
                     success:function(data)
                     {
                         $('#result').html(data);
+                    }
+                });
+            }
+
+            function sales_product_update(category) {
+                $.ajax({
+                    url:"salesProductUpdate.php",
+                    method:"post",
+                    data:{category:category},
+                    success:function(data) {
+                        for(const name of JSON.parse(data)) {
+                            $("#products").append("<option>" + name + "</option>");
+                        }
                     }
                 });
             }
