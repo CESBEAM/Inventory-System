@@ -192,6 +192,11 @@ font-weight: bold;
         font-weight: bold;
         font-size: .7em;
         cursor: pointer;
+        box-shadow: 0 6px 10px rgb(0 0 0 / 0.2);
+    }
+    .btn-reg-mob:hover{
+        background: #57575f;
+        transition: ease-in-out 0.2s;
     }
 
     nav li {
@@ -231,15 +236,16 @@ font-weight: bold;
                 display: none;
             }
     
-    .text-content-desk{
-        font-family: montserrat;
-        grid-area: text-content-desk;
-        color: #152329;
-        display: flex;
-        text-align: justify;
-        font-size: .8em;
-        margin: 0 7em;
-    }
+            .text-content-desk{
+                font-family: montserrat;
+                grid-area: text-content-desk;
+                color: #152329;
+                display: flex;
+                text-align: justify;
+                font-size: .8em;
+                margin-left: 12em;
+                margin-top: 3em;
+            }
 
     .desk-text{
         font-family: montserrat;
@@ -248,20 +254,21 @@ font-weight: bold;
         display: flex;
         text-align: justify;
         font-size: .8em;
-        margin-top: 10em;
-        padding: 0 7em;
+        margin-top: 14em;
+        /* padding: 0 10em; */
+        margin-left: 12em;
         line-height: 1.5em;
     } 
       
     .desk-img img{
-       display: flex;
-       grid-area: desk-img;       
-       justify-content: center;
-       align-items: center;
-       width: 50%;
-       margin: auto;
-      
-   } 
+        display: flex;
+        grid-area: desk-img;       
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        margin-left: 7em;
+       margin-top: 2em;
+    } 
 
    .desk-btn{
        display: block;

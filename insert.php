@@ -7,7 +7,10 @@ if(isset($_POST['categorySend']) && isset($_POST['nameSend']) && isset($_POST['p
 
     $sql="insert into `products` (category,name,price,stock,status)
     values ('$categorySend','$nameSend', '$priceSend', '$stockSend', '$statusSend')";
+    $sql1="insert into `history` (category,name,price,stock,status)
+    values ('$categorySend','$nameSend', '$priceSend', '$stockSend', '$statusSend')";
 
     $result=mysqli_query($con,$sql);
+    $result=mysqli_query($con,$sql1);
 }
 ?>

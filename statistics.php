@@ -41,7 +41,8 @@ if (!isset($_SESSION['canteenname'])){
                     <li><a href="home.php"> <img src="../icons/home.svg"> Home</a></li>
                     <li><a href="productTab.php"><img src="../icons/products.svg"> Products</a></li>
                     <li><a href="statistics.php"><img src="../icons/statistics.svg"> Statistics</a></li>
-                    <li><a href="history.php"><img src="../icons/history.svg"> History</a></li>
+                    <li><a href="history.php"><img src="../icons/reportHisto.svg"> History</a></li>
+                    <li><a href="calculator.php"><img src="/icons/calcIcon.svg"> Calculator</a></li>
                 </ul>
 
                 <div class="btn-logout">

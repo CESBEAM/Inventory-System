@@ -168,7 +168,7 @@ font-weight: bold;
 
 
     nav{
-       padding: 2em 6em;
+       padding: 2em 3.4em;
        justify-content: space-between;
         display: flex;
         align-items: center;
@@ -191,6 +191,7 @@ font-weight: bold;
         font-weight: bold;
         font-size: .7em;
         cursor: pointer;
+        box-shadow: 0 6px 10px rgb(0 0 0 / 0.2);
     }
 
     nav li {
@@ -206,6 +207,13 @@ font-weight: bold;
         font-size: small;
         margin-top: 0;
         padding: 0 2em;
+        font-weight: bold;
+    }
+
+    button:hover{
+        background: #2d8e87;
+        transition: ease-out 0.2s;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     }
 
     .main-content img{
@@ -270,8 +278,13 @@ font-weight: bold;
     color: #152329;
     background: #E0F2F2;
     font-weight: bold;
+    box-shadow: 0 6px 10px rgb(0 0 0 / 0.2);
     }
 
+    .desk-btn button:hover{
+        background: #878d92;
+        transition: ease-out 0.2s;
+    }
     
       
 

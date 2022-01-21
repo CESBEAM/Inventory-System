@@ -25,11 +25,11 @@
         </div>
 
         <div class="names-row1">
-            TORRES Nathaniel M. <b>,</b>     SANTANDER, Francis Beam F. <br><b>,</b>     DE VERA, Li'am Saiet G.
+          <b>  Torres Nathaniel M. <b>,</b>     Santander Francis Beam F. <br><b>,    De Vera Li'am Saiet G.</b>
         </div>
 
         <div class="names-row2">
-            DENOSTA Paul Jero M. <b>,</b>    ACOGOY Rodel G. <b>,</b>     <br>LIGERO, John Kenneth C.
+            Denosta Paul Jero M. <b>,</b>    Acogoy Rodel G. <b>,</b>     <br>Ligero John Kenneth C.
         </div>
     </body>
 </html>

@@ -1,10 +1,8 @@
 <?php 
-
 session_start();
 if (!isset($_SESSION['canteenname'])){
     header("Location: login.php");
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +13,6 @@ if (!isset($_SESSION['canteenname'])){
         <title>Products</title>
         <link rel="stylesheet" href="../styles/productTabStyle.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-
         <style>
             .wrapper .main_content img{
                 flex: 1;
@@ -46,7 +43,8 @@ if (!isset($_SESSION['canteenname'])){
                     <li><a href="home.php"> <img src="../icons/home.svg"> Home</a></li>
                     <li><a href="productTab.php"><img src="../icons/products.svg"> Products</a></li>
                     <li><a href="statistics.php"><img src="../icons/statistics.svg"> Statistics</a></li>
-                    <li><a href="history.php"><img src="../icons/history.svg"> History</a></li>
+                    <li><a href="history.php"><img src="../icons/reportHisto.svg"> History</a></li>
+                    <li><a href="calculator.php"><img src="/icons/calcIcon.svg"> Calculator</a></li>
                 </ul>
 
                 <div class="btn-logout">
@@ -78,10 +76,9 @@ if (!isset($_SESSION['canteenname'])){
                     <div class="form-group">
                     <label for="foodCategory">Category</label>
                     <select class="form-control" id="completecategory">
-                        <option>Food</option>
+                          <option>Launch Food</option>
                         <option>Snacks</option>
                         <option>Drinks</option>
-                        <option>Launch Food</option>
                         <option>School Supplies</option>
                          </select>
                     </div>
@@ -124,8 +121,6 @@ if (!isset($_SESSION['canteenname'])){
 
                 <!--end of Add new product-->
 
-
-
                 <!-- sales Modal -->
                 <div class="modal fade" id="sellsModal" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -144,7 +139,6 @@ if (!isset($_SESSION['canteenname'])){
                         <option value="Food">Food</option>
                         <option value="Snacks">Snacks</option>
                         <option value="Drinks">Drinks</option>
-                        <option value="Launch">Launch Food</option>
                         <option value="School">School Supplies</option>
                     </select>
                     </div>
@@ -179,7 +173,6 @@ if (!isset($_SESSION['canteenname'])){
                 </div>
                 </div>
 
-
                 <!-- update modal -->
                 <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -195,10 +188,9 @@ if (!isset($_SESSION['canteenname'])){
                     <div class="form-group">
                     <label for="updatecategory">Category</label>
                     <select class="form-control" id="updatecategory">
-                        <option>Food</option>
+                        <option>Launch Food</option>
                         <option>Snacks</option>
                         <option>Drinks</option>
-                        <option>Launch Food</option>
                         <option>School Supplies</option>
                          </select>
                     </div>
@@ -261,7 +253,6 @@ if (!isset($_SESSION['canteenname'])){
             <form class="form-inline">
               <input class="form-control mr-sm-2" type="search" id="search_text" placeholder="Search">
              </form>
-            
 
             <!-- display database table -->
 
@@ -270,151 +261,11 @@ if (!isset($_SESSION['canteenname'])){
                <div id="result"></div>
             </div>
         </div>
-    
 
         <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
-        <script>
-            $(document).ready(function(){
-                displayData();
-            });
-
-            //display function
-            function displayData() {
-                var displayData="true";
-                $.ajax({
-                    url:"display.php",
-                    type:'post',
-                    data:{
-                        displaySend:displayData
-                    },
-                    success:function(data,status){
-                        $('#displayDataTable').html(data);
-                    }
-                });
-            }
-
-            function addproduct(){
-                var categoryAdd=$('#completecategory').val();
-                var nameAdd=$('#completename').val();
-                var priceAdd=$('#completeprice').val();
-                var stockAdd=$('#completestock').val();
-                var statusAdd=$('#completestatus').val();
-
-                $.ajax({
-                    url:"insert.php",
-                    type:'post',
-                    data:{
-                        categorySend:categoryAdd,
-                        nameSend:nameAdd,
-                        priceSend:priceAdd, 
-                        stockSend:stockAdd, 
-                        statusSend:statusAdd,
-                    },
-                    success:function(data,status) {
-                        //function to display
-                        // console.log(status);
-                        $('#completeModal').modal('hide');
-                        load_data();
-                    }
-                });
-            }
-
-            //delete record
-            function deleteProduct(deleteno) {
-                $.ajax({
-                    url:"delete.php",
-                    type:'post',
-                    data:{
-                        deletesend:deleteno
-                    },
-                    success:function(data,status){
-                        load_data();
-                    }
-                });
-            }
-
-            //update function
-            function updateProduct(updateid){
-                $('#hiddendata').val(updateid);
-
-                $.post("update.php", {updateid:updateid}, function(data,status) {
-                    var userid=JSON.parse(data);
-                    $('#updatecategory').val(userid.category);
-                    $('#updatename').val(userid.name);
-                    $('#updateprice').val(userid.price);
-                    $('#updatestock').val(userid.stock);
-                    $('#updatestatus').val(userid.status);
-                });
-
-                $('#updateModal').modal("show");
-            }
-
-            //onclick update event Details
-            function updateDetails(){
-                var updatecategory=$('#updatecategory').val();
-                var updatename=$('#updatename').val();
-                var updateprice=$('#updateprice').val();
-                var updatestock=$('#updatestock').val();
-                var updatestatus=$('#updatestatus').val();
-                var hiddendata=$('#hiddendata').val();
-
-                $.post("update.php", {
-                    updatecategory:updatecategory,
-                    updatename:updatename,
-                    updateprice:updateprice,
-                    updatestock:updatestock,
-                    updatestatus:updatestatus,
-                    hiddendata:hiddendata
-                    },function(data,status){
-                    $('#updateModal').modal('hide');
-                    load_data();
-                });
-            }
-
-            function load_data(query) {
-                $.ajax({
-                    url:"search.php",
-                    method:"post",
-                    data:{query:query},
-                    success:function(data)
-                    {
-                        $('#result').html(data);
-                    }
-                });
-            }
-
-            function sales_product_update(category) {
-                $.ajax({
-                    url:"salesProductUpdate.php",
-                    method:"post",
-                    data:{category:category},
-                    success:function(data) {
-                        for(const name of JSON.parse(data)) {
-                            $("#products").append("<option>" + name + "</option>");
-                        }
-                    }
-                });
-            }
-
-            //search function
-            $(document).ready(function(){
-            load_data();
-
-            $('#search_text').keyup(function() {
-                var search = $(this).val();
-                if(search != '') {
-                    load_data(search);
-                }
-                else {
-                    load_data();
-                }
-            });
-        });
-        </script>
+        <script src="/JavaScript/productConfig.js"></script>
     </body>
 </html>
