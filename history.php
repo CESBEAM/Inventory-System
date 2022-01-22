@@ -18,6 +18,11 @@ if (!isset($_SESSION['canteenname'])){
         <link rel="stylesheet" href="../styles/historyTabStyle.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <style>
+            .sidebar a{
+                text-decoration: none;
+                list-style: none;
+                color:white;
+            }
             .wrapper .main_content img{
                 flex: 1;
                 margin-top: 3.5em;
@@ -37,16 +42,31 @@ if (!isset($_SESSION['canteenname'])){
             <div class="sidebar">
                 <h2><?php echo "Welcome! ". $_SESSION['canteenname'];?></h2>
                 <ul>
-                <li><a href="home.php"> <img src="../icons/home.svg"> Home</a></li>
-                    <li><a href="productTab.php"><img src="../icons/products.svg"> Products</a></li>
-                    <li><a href="statistics.php"><img src="../icons/statistics.svg"> Statistics</a></li>
-                    <li><a href="history.php"><img src="../icons/reportHisto.svg"> History</a></li>
-                    <li><a href="calculator.php"><img src="/icons/calcIcon.svg"> Calculator</a></li>
+                <ul>
+                <a href="home.php"> 
+                <li><img src="../icons/home.svg"> Home</li>
+                </a>
+                 <a href="productTab.php">
+                    <li><img src="../icons/products.svg"> Products</li>
+                  </a>
+                  <a href="statistics.php">
+                    <li><img src="../icons/statistics.svg"> Statistics</li>
+                </a>
+                <a href="history.php">
+                    <li><img src="../icons/reportHisto.svg"> History</li></a>
+                    <a href="calculator.php">
+                    <li><img src="/icons/calculatorIcon.svg"> Calculator</li>
+                    </a>
                 </ul>
 
                 <div class="btn-logout">
-                   <ul><li><a href="logout.php"><img src="../icons/logout.svg"> Logout</a></li></ul>
+                    <ul>
+                    <a href="logout.php">
+                        <li><img src="../icons/logoutIcon.svg"> Logout</li>
+                        </a>
+                    </ul> 
                 </div>
+
 
             </div>
 
@@ -58,12 +78,7 @@ if (!isset($_SESSION['canteenname'])){
                 </div>
 
                 <div id="result"></div>
-
-                <div class="info">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
+                
             </div>
         </div>
 

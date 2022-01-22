@@ -2,6 +2,7 @@
 session_start();
 if (!isset($_SESSION['canteenname'])){
     header("Location: login.php");
+
 }
 ?>
 <!DOCTYPE html>
@@ -13,7 +14,17 @@ if (!isset($_SESSION['canteenname'])){
         <title>Products</title>
         <link rel="stylesheet" href="../styles/productTabStyle.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
         <style>
+            body{
+                background: #f0efee;
+            }
+           .sidebar a{
+                text-decoration: none;
+                list-style: none;
+                color:white;
+            }
             .wrapper .main_content img{
                 flex: 1;
                 margin-top: 3.5em;
@@ -40,15 +51,28 @@ if (!isset($_SESSION['canteenname'])){
             <div class="sidebar">
                 <h2><?php echo "Welcome! ". $_SESSION['canteenname'];?></h2>
                 <ul>
-                    <li><a href="home.php"> <img src="../icons/home.svg"> Home</a></li>
-                    <li><a href="productTab.php"><img src="../icons/products.svg"> Products</a></li>
-                    <li><a href="statistics.php"><img src="../icons/statistics.svg"> Statistics</a></li>
-                    <li><a href="history.php"><img src="../icons/reportHisto.svg"> History</a></li>
-                    <li><a href="calculator.php"><img src="/icons/calcIcon.svg"> Calculator</a></li>
+                <a href="home.php"> 
+                <li><img src="../icons/home.svg"> Home</li>
+                </a>
+                 <a href="productTab.php">
+                    <li><img src="../icons/products.svg"> Products</li>
+                  </a>
+                  <a href="statistics.php">
+                    <li><img src="../icons/statistics.svg"> Statistics</li>
+                </a>
+                <a href="history.php">
+                    <li><img src="../icons/reportHisto.svg"> History</li></a>
+                    <a href="calculator.php">
+                    <li><img src="/icons/calculatorIcon.svg"> Calculator</li>
+                    </a>
                 </ul>
 
                 <div class="btn-logout">
-                    <ul><li><a href="logout.php"><img src="../icons/logout.svg"> Logout</a></li></ul> 
+                    <ul>
+                    <a href="logout.php">
+                        <li><img src="../icons/logoutIcon.svg"> Logout</li>
+                        </a>
+                    </ul> 
                 </div>
 
             </div>
@@ -76,7 +100,7 @@ if (!isset($_SESSION['canteenname'])){
                     <div class="form-group">
                     <label for="foodCategory">Category</label>
                     <select class="form-control" id="completecategory">
-                          <option>Launch Food</option>
+                        <option>Launch Food</option>
                         <option>Snacks</option>
                         <option>Drinks</option>
                         <option>School Supplies</option>
@@ -102,8 +126,8 @@ if (!isset($_SESSION['canteenname'])){
                     </div>
                     <input type="number" class="form-control" id="completestock">
                     <select class="status-prepend" id="completestatus">
-                        <option>Available</option>
-                        <option>Low</option>
+                    <option class="badge bg-success">Available</option>
+                        <option class="badge bg-danger">Low</option>
                         </select>
                     </div>
 
@@ -136,7 +160,7 @@ if (!isset($_SESSION['canteenname'])){
                     <div class="form-group">
                     <label for="sellscategory">Category</label>
                     <select class="form-control" id="sellscategory" onchange="sales_product_update(this.value);">
-                        <option value="Food">Food</option>
+                        <option value="Food">Launch Food</option>
                         <option value="Snacks">Snacks</option>
                         <option value="Drinks">Drinks</option>
                         <option value="School">School Supplies</option>
@@ -214,15 +238,15 @@ if (!isset($_SESSION['canteenname'])){
                     </div>
                     <input type="number" class="form-control" id="updatestock">
                     <select class="status-prepend" id="updatestatus">
-                        <option>Available</option>
-                        <option>Low</option>
+                        <option class="badge bg-success">Available</option>
+                        <option class="badge bg-danger">Low</option>
                         </select>
                     </div>
 
                     </div>
 
                     <div class="modal-footer">
-                    <button type="button" class="btn btn-success" onclick="updateDetails()">Update</button>
+                    <button type="button" class="btn btn-primary" onclick="updateDetails()">Update</button>
 
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                     <input type="hidden" id="hiddendata">
@@ -233,13 +257,19 @@ if (!isset($_SESSION['canteenname'])){
 
                 <!-- 2 buttons add and sale product -->
 
-                <button type="button" class="btn btn-primary mx-5 mt-3 my-3" data-toggle="modal" data-target="#completeModal">
+                <button type="button" class="btn btn-success mx-5 mt-3 my-3" data-toggle="modal" data-target="#completeModal">
                 Add New Product
                 </button>
 
                 <button type="button" class="btn btn-primary mx-5 mt-3 my-4" data-toggle="modal" data-target="#sellsModal">
                 Sale Product
                 </button>
+
+                <a href="report.php">
+                <button type="button" class="btn btn-primary">
+                Print Report
+                </button>
+                </a>
 
                 <!-- search bar -->
 
@@ -251,6 +281,7 @@ if (!isset($_SESSION['canteenname'])){
 		    	</div> -->
 
             <form class="form-inline">
+                <label class="material-icons">search</label>
               <input class="form-control mr-sm-2" type="search" id="search_text" placeholder="Search">
              </form>
 
@@ -259,6 +290,7 @@ if (!isset($_SESSION['canteenname'])){
                <!-- No need for displayDataTable -->
                <!-- <div id="displayDataTable"></div> -->
                <div id="result"></div>
+             
             </div>
         </div>
 

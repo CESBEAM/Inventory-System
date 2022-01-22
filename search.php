@@ -1,3 +1,18 @@
+<style>
+	update{
+		cursor: pointer;
+		position: absolute;
+		
+		color: #6f42c1;
+	}	
+	delete{
+		cursor: pointer;
+		position: absolute;
+		color: #dc3545;
+		margin-left: 2.1em;
+	}
+</style>
+
 <?php
 $connect = mysqli_connect("localhost", "root", "", "conpyx");
 $output = '';
@@ -27,11 +42,14 @@ if(mysqli_num_rows($result) > 0)
 							<th>Unit price</th>
 							<th>Stock</th>
                             <th>Status</th>
+							<th>Edit / Delete</th>
 						</tr>';
+
 	while($row = mysqli_fetch_array($result))
 	{
 		$output .= '
 			<tr>
+				
 				<td>'.$row["id"].'</td>
 				<td>'.$row["category"].'</td>
 				<td>'.$row["name"].'</td>
@@ -39,11 +57,13 @@ if(mysqli_num_rows($result) > 0)
 				<td>'.$row["stock"].'</td>
                 <td>'.$row["status"].'</td>
 				<td>
-        			<button class = "btn btn-success" onclick="updateProduct('.$row["id"].')">Update</button>
-        			<button class = "btn btn-danger" onclick="deleteProduct('.$row["id"].')">Delete</button>
+        			<update class = "material-icons" onclick="updateProduct('.$row["id"].')">edit</update>
+				
+        			<delete class = "material-icons" onclick="deleteProduct('.$row["id"].')">delete</delete>
         		</td>
 			</tr>
 		';
+	
 	}
 	echo $output;
 }
