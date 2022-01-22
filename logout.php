@@ -2,7 +2,7 @@
   session_start();
   session_destroy();
   
-  header("Location: homeLogout.php");
+  header("Location: bsucanteen.php");
 ?>
 
 
