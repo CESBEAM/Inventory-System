@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bulsu Canteen</title>
     <link rel="stylesheet" href="../styles/homeLogoutStyle.css">
+    <link rel="shortcut icon" type="image/png" href="icons/favIcon.png">
   </head>
   <body>
     <aside>
@@ -50,7 +51,7 @@
         </div>
 
         <div class="details-content">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium ratione aliquam esse a voluptas sed fugiat ipsam ut, numquam dolorem repellendus non molestias! Quisquam vel soluta velit. Ea repellat minus sint harum, ut eum similique sed dolore accusantium eos nostrum tempora optio nesciunt neque numquam dicta soluta aut omnis ad perferendis alias obcaecati quis at. Facere accusantium eos enim. Quasi corrupti harum in tempore odit, fugiat, alias, voluptatibus itaque quibusdam fuga cupiditate id delectus rerum! Vero molestiae neque earum porro quaerat cum minus rem atque. Rem quasi mollitia voluptatum, repellendus dolor maxime animi dolorum recusandae. Debitis voluptatem aperiam temporibus nostrum!</p>
+          <p>It is a web-based inventory management system for tracking inventory levels, orders, sales and deliveries.It can also be used in the manufacturing industry to create a work order, bill of materials and other production-related documents. Companies use inventory management software to avoid product overstock and outages. This inventory system process your goods throughout your entire supply chain, from purchasing to production to end sales. It governs how you approach inventory management for your business.</p>
         </div>
       </div>
     </main>
@@ -65,7 +66,7 @@
       </div>
 
       <div class="desk-text">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium ratione aliquam esse a voluptas sed fugiat ipsam ut, numquam dolorem repellendus non molestias! Quisquam vel soluta velit. Ea repellat minus sint harum, ut eum similique sed dolore accusantium eos nostrum tempora optio nesciunt neque numquam dicta soluta aut omnis ad perferendis alias obcaecati quis at. Facere accusantium eos enim. Quasi corrupti harum in tempore odit, fugiat, alias, voluptatibus itaque quibusdam fuga cupiditate id delectus rerum! Vero molestiae neque earum porro quaerat cum minus rem atque. Rem quasi mollitia voluptatum, repellendus dolor maxime animi dolorum recusandae. Debitis voluptatem aperiam temporibus nostrum!</p>
+        <p>It is a web-based inventory management system for tracking inventory levels, orders, sales and deliveries.It can also be used in the manufacturing industry to create a work order, bill of materials and other production-related documents. Companies use inventory management software to avoid product overstock and outages. This inventory system process your goods throughout your entire supply chain, from purchasing to production to end sales. It governs how you approach inventory management for your business.</p>
       </div>
 
       <div class="desk-img">

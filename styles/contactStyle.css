@@ -4,7 +4,7 @@ html,body{
 }
 
 .top-head{
-    padding: 3em;
+    padding: 2em;
     text-align: center;
     font-family: montserrat;
     color:#152329;
@@ -31,7 +31,7 @@ html,body{
     text-align: justify;
     font-family: montserrat;
     padding: 0 8em;
-    font-size: .7rem;
+    font-size: .8rem;
     color:#152329;
 }
 

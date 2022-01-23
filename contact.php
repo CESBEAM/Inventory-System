@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Contact us</title>
         <link rel="stylesheet" href="../styles/contactStyle.css">
+        <link rel="shortcut icon" type="image/png" href="icons/favIcon.png">
     </head>
     <body>
         <div class="top-head">
@@ -13,7 +14,7 @@
         </div>
 
         <div class="system-img">
-            <img src="../Images/Ellipse 2.svg" height="100">
+            <img src="/images/logoDesk.svg" height="150">
         </div>
 
         <div class="head-content">
@@ -21,15 +22,15 @@
         </div>
 
         <div class="text-content">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita laboriosam deserunt quidem, perspiciatis adipisci sint, inventore omnis doloribus quisquam aliquid assumenda veniam itaque labore dolor ratione quam explicabo amet vel ea optio? Temporibus, maiores id. Fugiat quisquam ducimus quasi doloremque autem! Quos autem doloribus tempora, unde consectetur odio. Temporibus, facere.
+        We are the students of Bulacan State University Sarmiento Campus and we are proudly to present our final project in System Analysis and Design. We hopping that you all are appreciate our simple web system and happily that our hard and efforts are have good result. Here is the among student from the BSIT - 3C, Advicer Joan G. Perez sy 2021 - 2022.
         </div>
 
         <div class="names-row1">
-          <b>  Torres Nathaniel M. <b>,</b>     Santander Francis Beam F. <br><b>,    De Vera Li'am Saiet G.</b>
+          <b>Torres Nathaniel M. <b>&nbsp; &nbsp;</b>Santander Francis Beam F. <br>&nbsp; <b>De Vera Li'am Saiet G.</b>
         </div>
 
         <div class="names-row2">
-            Denosta Paul Jero M. <b>,</b>    Acogoy Rodel G. <b>,</b>     <br>Ligero John Kenneth C.
+           <b>Denosta Paul Jero M. <b>&nbsp; &nbsp; </b>Acogoy Rodel G.<br>&nbsp;<b>Ligero John Kenneth C.
         </div>
     </body>
 </html>

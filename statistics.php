@@ -15,6 +15,7 @@ if (!isset($_SESSION['canteenname'])){
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Statistics</title>
+        <link rel="shortcut icon" type="image/png" href="icons/favIcon.png">
         <link rel="stylesheet" href="../styles/statisticsTabStyle.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
@@ -56,6 +57,9 @@ if (!isset($_SESSION['canteenname'])){
                     <li><img src="../icons/reportHisto.svg"> History</li></a>
                     <a href="calculator.php">
                     <li><img src="/icons/calculatorIcon.svg"> Calculator</li>
+                    </a>
+                    <a href="saleproduct.php">
+                    <li><img src="/icons/dollar.svg"> Sale Products</li>
                     </a>
                 </ul>
 

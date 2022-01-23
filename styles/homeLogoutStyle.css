@@ -282,12 +282,10 @@ font-weight: bold;
     }
 
     .desk-btn button:hover{
-        background: #878d92;
+        background: #4e84b1;
         transition: ease-out 0.2s;
     }
     
-      
-
     /* .desk-image{
         display: flex;
         justify-content:flex-end;

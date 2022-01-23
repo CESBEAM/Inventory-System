@@ -12,7 +12,8 @@ if (!isset($_SESSION['canteenname'])){
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Products</title>
-        <link rel="stylesheet" href="../styles/productTabStyle.css">
+        <link rel="shortcut icon" type="image/png" href="icons/favIcon.png">
+        <link rel="stylesheet" href="/styles/productTabStyle.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet">
@@ -64,6 +65,9 @@ if (!isset($_SESSION['canteenname'])){
                     <li><img src="../icons/reportHisto.svg"> History</li></a>
                     <a href="calculator.php">
                     <li><img src="/icons/calculatorIcon.svg"> Calculator</li>
+                    </a>
+                    <a href="saleproduct.php">
+                    <li><img src="/icons/dollar.svg"> Sale Products</li>
                     </a>
                 </ul>
 
@@ -124,7 +128,7 @@ if (!isset($_SESSION['canteenname'])){
                     <div class="input-stock-prepend">
                         <span class="input-group-text">Stock</span>
                     </div>
-                    <input type="number" class="form-control" id="completestock">
+                    <input type="number" class="form-control" id="completestock" style="border-radius: 5px black;">
                     <select class="status-prepend" id="completestatus">
                     <option class="badge bg-success">Available</option>
                         <option class="badge bg-danger">Low</option>
@@ -144,58 +148,6 @@ if (!isset($_SESSION['canteenname'])){
                 </div>
 
                 <!--end of Add new product-->
-
-                <!-- sales Modal -->
-                <div class="modal fade" id="sellsModal" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Sales Product</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-
-                    <div class="form-group">
-                    <label for="sellscategory">Category</label>
-                    <select class="form-control" id="sellscategory" onchange="sales_product_update(this.value);">
-                        <option value="Food">Launch Food</option>
-                        <option value="Snacks">Snacks</option>
-                        <option value="Drinks">Drinks</option>
-                        <option value="School">School Supplies</option>
-                    </select>
-                    </div>
-
-                    <div class="form-group" id="poll">
-                    <label for="sellsproduct">Product Tag</label>
-                    <select class="form-control" id="products">
-                        <option>Select Product</option>
-                    </select>
-                    </div>
-
-                    <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Quanty</span>
-                    </div>
-                    <input type="number" class="form-control" id="sellsprice">
-                    </div>
-
-                    <div class="form-group">
-                    <label for="totalsales">Total Sales: </label>
-                   </div>
-
-                    </div>
-
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" onclick="">Proceed</button>
-
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                   
-                       </div>
-                    </div>
-                </div>
-                </div>
 
                 <!-- update modal -->
                 <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -237,7 +189,7 @@ if (!isset($_SESSION['canteenname'])){
                         <span class="input-group-text">Stock</span>
                     </div>
                     <input type="number" class="form-control" id="updatestock">
-                    <select class="status-prepend" id="updatestatus">
+                    <select class="status-prepend" id="updatestatus" style="border-radius: black 5px;">
                         <option class="badge bg-success">Available</option>
                         <option class="badge bg-danger">Low</option>
                         </select>
@@ -259,10 +211,6 @@ if (!isset($_SESSION['canteenname'])){
 
                 <button type="button" class="btn btn-success mx-5 mt-3 my-3" data-toggle="modal" data-target="#completeModal">
                 Add New Product
-                </button>
-
-                <button type="button" class="btn btn-primary mx-5 mt-3 my-4" data-toggle="modal" data-target="#sellsModal">
-                Sale Product
                 </button>
 
                 <a href="report.php">

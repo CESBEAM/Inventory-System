@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="260" viewBox="0 0 260 260">
+  <g id="Group_45" data-name="Group 45" transform="translate(-278 -350)">
+    <g id="Group_44" data-name="Group 44" transform="translate(0 -2)">
+      <circle id="Ellipse_1" data-name="Ellipse 1" cx="130" cy="130" r="130" transform="translate(278 352)" fill="#d5d5d5"/>
+    </g>
+    <text id="CONPYX" transform="translate(344 532)" font-size="34" font-family="Corbel-Bold, Corbel" font-weight="700"><tspan x="0" y="0">CONPYX</tspan></text>
+    <g id="tree-svgrepo-com_2_" data-name="tree-svgrepo-com (2)" transform="translate(245.312 386.19)">
+      <path id="Path_48" data-name="Path 48" d="M178.332,19.7c-12.232,7.54-21.5,41.469-21.5,57.664s9.267,15.063,21.5,17.932" transform="translate(-15.363 -15.36)" fill="#c6fc68"/>
+      <path id="Path_49" data-name="Path 49" d="M162.972,84.273a4.354,4.354,0,0,1-.993-.116c-1.8-.423-3.544-.756-5.192-1.071-9.66-1.853-19.65-3.767-19.65-21.079,0-16.08,9.173-52.487,23.558-61.354a4.333,4.333,0,1,1,4.548,7.377C157.92,12.545,145.8,39.638,145.8,62.005c0,10.149,3.18,10.756,12.613,12.566,1.765.338,3.589.687,5.541,1.146a4.336,4.336,0,0,1-.987,8.556Z" transform="translate(0 -0.007)" fill="#07a595"/>
+      <path id="Path_50" data-name="Path 50" d="M253.532,19.7c12.235,7.54,21.49,41.469,21.49,57.664s-9.269,15.063-21.49,17.932" transform="translate(-90.777 -15.36)" fill="#a7d613"/>
+      <path id="Path_51" data-name="Path 51" d="M238.17,84.266a4.335,4.335,0,0,1-.988-8.556c1.951-.459,3.776-.81,5.539-1.148,9.428-1.808,12.6-2.418,12.6-12.564,0-22.369-12.107-49.462-19.427-53.975A4.333,4.333,0,0,1,240.447.646C254.824,9.508,263.994,45.916,263.994,62c0,17.31-9.983,19.227-19.64,21.079-1.649.317-3.386.648-5.191,1.071A4.351,4.351,0,0,1,238.17,84.266Z" transform="translate(-75.417 0)" fill="#07a595"/>
+      <path id="Path_52" data-name="Path 52" d="M238.639,337.445a4.334,4.334,0,0,1-4.334-4.334V293.649a4.334,4.334,0,0,1,8.669,0v39.462A4.334,4.334,0,0,1,238.639,337.445Z" transform="translate(-75.782 -225.635)" fill="#07a595"/>
+    </g>
+  </g>
+</svg>

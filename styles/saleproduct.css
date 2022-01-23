@@ -15,7 +15,7 @@
     display: flex;
     position: relative;
   }
-
+  
   .wrapper .sidebar h2{
     color: #F0F0F0;
     font-size: medium;
@@ -34,8 +34,8 @@
   }
   
   .wrapper .sidebar .btn-logout{
-      margin-top: 17em;
-  }
+    margin-top: 17em;
+}
   
   .wrapper .sidebar ul li{
     padding: 20px;
@@ -54,48 +54,55 @@
     color: #fff;
   }
    
-
+  
   .wrapper .main_content{
     width: 100%;
     margin-left: 200px;
   }
   
   .wrapper .main_content img{
-      flex: 1;
-      margin-top: 3em;
-      margin-left: 3em;
-      position: absolute;
+    flex: 1;
+    margin-top: 3em;
+    margin-left: 3em;
+    position: absolute;
   }
-
+  
   .wrapper .main_content .header h2{
-    margin-top: 1.5em;
-    margin-left: 3.2em;
-    color: black;
+  margin-top: 1.5em;
+  margin-left: 3.2em;
+  color: black;
   }
-
+  
   .wrapper .main_content .header p{
     margin-left: 6.5em;
     color: black;
     font-weight: 300;
   }
-  
-  .wrapper .main_content .info{
-    margin: 20px;
-    color: #717171;
-    line-height: 25px;
+    
+    .wrapper .main_content .header-sales{
+      position: absolute;
+      margin-left: 5em;
+      margin-top: 22em;
+      font-weight: bold;
+      font-size: 1rem;
   }
   
-  .wrapper .main_content .info div{
-    margin-bottom: 20px;
-  }
-
-  /*Start Here! for the CRUD*/
- /* button[type='button'] {
-    background: blue;
-  } */
-  
-  @media (max-height: 500px){
-    .social_media{
-      display: none !important;
+    .wrapper .main_content .sales-info{
+      margin: 20px;
+      /* color: #9B1CFC; */
+      color: black;
+      line-height: 35px;
+      margin-left: 5em;
+      margin-top: 5em;
+      font-weight: 350;
     }
-  }
+    
+    .wrapper .main_content .info div{
+      margin-bottom: 20px;
+    }
+    
+    @media (max-height: 500px){
+      .social_media{
+        display: none !important;
+      }
+    }
