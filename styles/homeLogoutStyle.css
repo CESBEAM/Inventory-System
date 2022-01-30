@@ -155,8 +155,7 @@ font-weight: bold;
 @media (min-width: 768px){
       body{
         background: #E0F2F2;
-        height: 100%;
-        
+        min-height:80vh;
     }
     .logo{
         display: none;
@@ -168,7 +167,7 @@ font-weight: bold;
 
 
     nav{
-       padding: 2em 3.4em;
+       padding: 2em 5.7em;
        justify-content: space-between;
         display: flex;
         align-items: center;
@@ -185,7 +184,7 @@ font-weight: bold;
         display: inline;
         font-family: montserrat;
         border-style: none;
-        padding: 1.2em 3em;
+        padding: 1.5em 4em;
         color: #FFFFFF;
         background: #0C695D;
         font-weight: bold;
@@ -206,7 +205,7 @@ font-weight: bold;
     nav li a{
         font-size: small;
         margin-top: 0;
-        padding: 0 2em;
+        padding: 0 1em;
         font-weight: bold;
     }
 

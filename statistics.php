@@ -16,7 +16,7 @@ if (!isset($_SESSION['canteenname'])){
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Statistics</title>
         <link rel="shortcut icon" type="image/png" href="icons/favIcon.png">
-        <link rel="stylesheet" href="../styles/statisticsTabStyle.css">
+        <link rel="stylesheet" href="/styles/statisticsTabStyle.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
         <style>
@@ -45,35 +45,35 @@ if (!isset($_SESSION['canteenname'])){
             <h2><?php echo "Welcome! ". $_SESSION['canteenname'];?></h2>
             <ul>
                 <a href="home.php"> 
-                <li><img src="../icons/home.svg"> Home</li>
+                <li><img src="/icons/home.svg"> Home</li>
                 </a>
                  <a href="productTab.php">
-                    <li><img src="../icons/products.svg"> Products</li>
+                    <li><img src="/icons/products.svg"> Products</li>
                   </a>
                   <a href="statistics.php">
-                    <li><img src="../icons/statistics.svg"> Statistics</li>
+                    <li><img src="/icons/statistics.svg"> Statistics</li>
                 </a>
                 <a href="history.php">
-                    <li><img src="../icons/reportHisto.svg"> History</li></a>
+                    <li><img src="/icons/reportHisto.svg"> History</li></a>
                     <a href="calculator.php">
                     <li><img src="/icons/calculatorIcon.svg"> Calculator</li>
                     </a>
                     <a href="saleproduct.php">
-                    <li><img src="/icons/dollar.svg"> Sale Products</li>
+                    <li><img src="/icons/dollar.svg"> Sell Products</li>
                     </a>
                 </ul>
 
                 <div class="btn-logout">
                     <ul>
                     <a href="logout.php">
-                        <li><img src="../icons/logoutIcon.svg"> Logout</li>
+                        <li><img src="/icons/logoutIcon.svg"> Logout</li>
                         </a>
                     </ul> 
                 </div>
             </div>
 
             <div class="main_content">
-                <img src="../icons/indicator.svg" alt="">
+                <img src="/icons/indicator.svg" alt="">
                 <div class="header">
                     <h2>Statistics</h2>
                     <p>This is where you can see all productivity grow.</p>

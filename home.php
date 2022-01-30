@@ -16,7 +16,7 @@ if (!isset($_SESSION['canteenname'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bulsu Canteen</title>
     <link rel="shortcut icon" type="image/png" href="icons/favIcon.png">
-    <link rel="stylesheet" href="../styles/homeStyle.css">
+    <link rel="stylesheet" href="/styles/homeStyle.css">
   </head>
   <body>
     <aside>
@@ -25,7 +25,7 @@ if (!isset($_SESSION['canteenname'])){
           <a href="contact.php">CONPYX</a>
         </div>
         <div class="menu">
-          <img src="../icons/menuwh.svg" alt="">
+          <img src="/icons/menuwh.svg" alt="">
         </div>
       </header>
 
@@ -46,7 +46,7 @@ if (!isset($_SESSION['canteenname'])){
 
     <main>
       <div class="main-content">
-        <img src="../Images/mobileImg.svg" class="mob-content">
+        <img src="/Images/mobileImg.svg" class="mob-content">
         <div class="text-content">
           <h1>Great life with best solutions for real businesses</h1>
         </div>
@@ -62,7 +62,7 @@ if (!isset($_SESSION['canteenname'])){
         </div>
 
         <div class="details-content">
-          <p>It is a web-based inventory management system for tracking inventory levels, orders, sales and deliveries.It can also be used in the manufacturing industry to create a work order, bill of materials and other production-related documents. Companies use inventory management software to avoid product overstock and outages. This inventory system process your goods throughout your entire supply chain, from purchasing to production to end sales. It governs how you approach inventory management for your business.</p>
+          <p>Web-based Basic Inventory Management System is a modern information system that serve good main purposes and dedicated to the management and to other users suited for businesses. Using today’s technology Internet web services, it's possible to developed and to make our own workplace advance.</p>
         </div>
       </div>
     </main>
@@ -70,7 +70,7 @@ if (!isset($_SESSION['canteenname'])){
     <!--Desk view!!! -->
 
     <div class="desk-version">
-      <img src="../Images/deskviewImg.svg" class="des-content">
+      <img src="/Images/deskviewImg.svg" class="des-content">
 
       <div class="text-content-desk">
         <h1>Great life with best solutions for real businesses</h1>
@@ -81,7 +81,7 @@ if (!isset($_SESSION['canteenname'])){
       </div>
 
       <div class="desk-img">
-        <img src="../Images/deskviewImg.svg" alt="">
+        <img src="/Images/deskviewImg.svg" alt="">
       </div>
 
       <!-- <div class="desk-btn">

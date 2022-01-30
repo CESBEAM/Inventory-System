@@ -168,7 +168,7 @@ font-weight: bold;
 
 
     nav{
-       padding: 2em 3.4em;
+        padding: 2em 5.7em;
        justify-content: space-between;
         display: flex;
         align-items: center;
@@ -186,7 +186,7 @@ font-weight: bold;
         display: inline;
         font-family: montserrat;
         border-style: none;
-        padding: 1.2em 3em;
+        padding: 1.5em 4em;
         color: #FFFFFF;
         background: #152329;
         font-weight: bold;
