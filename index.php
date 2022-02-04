@@ -22,10 +22,10 @@
       <nav>
         <a href="contact.php" class="logomob">CONPYX</a>
         <ul>
-          <li><a href="bulsu.php">Bulsu</a></li>
-          <li><a href="contact.php">Contact us</a></li>
+          <li><a href="/Pages/bulsu.php">Bulsu</a></li>
+          <li><a href="/Pages/contact.php">Contact us</a></li>
           <li>
-            <a href="register.php">
+            <a href="/Pages/register.php">
               <button class="btn-reg-mob">REGISTER</button>
             </a>
           </li>
@@ -41,11 +41,11 @@
         </div>
 
         <div class="button-area">
-          <a href ="login.php">
+          <a href ="/Pages/login.php">
             <button class="btn-login">LOGIN</button>
           </a>
 
-          <a href ="register.php">
+          <a href ="/Pages/register.php">
             <button class="btn-reg">REGISTER</button>
           </a>
         </div>
@@ -74,7 +74,7 @@
       </div>
 
       <div class="desk-btn">
-        <a href ="login.php">
+        <a href ="/Pages/login.php">
           <button class="desk-login">LOGIN</button>
         </a>
       </div>
